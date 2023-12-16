@@ -20,12 +20,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
+        #if Firebase
+        let loginService = FirebaseLoginService()
+        let networkDataService = FirebaseNetworkDataService()
+        #elseif Server
+        let loginService = ServerLoginService()
+        let networkDataService = ServerNetworkDataService()
+        #endif
+        
         let navigationController = UINavigationController()
-        let assmblyBuilder = AssemblyModuleBuilder()
+        let assmblyBuilder = AssemblyModuleBuilder(loginService: loginService, networkDataService: networkDataService)
         let router = Router(navigationController: navigationController, assemblyBuilder: assmblyBuilder)
         
         router.tabBarViewController()
-        if !LoginService.checkAuth() {
+        
+        if !type(of: loginService).checkAuth() {
             router.loginViewController()
         }
         

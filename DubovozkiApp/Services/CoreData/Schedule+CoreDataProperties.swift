@@ -15,7 +15,7 @@ extension Schedule : Identifiable {
         let currentSchedule = data.isEmpty ? nil : data.first
         
         Schedule.backgroundContext.perform {
-            Schedule.networkDataService.getData { downloadedData in
+            Schedule.networkDataService?.getData { downloadedData in
                 let decoder = JSONDecoder()
                 decoder.userInfo[CodingUserInfoKey.managedObjectContext] = Schedule.context
                 let decodedDownloadedSchedule = try! decoder.decode(Schedule.self, from: downloadedData)

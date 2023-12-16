@@ -16,16 +16,23 @@ protocol AssemblyBuilderProtocol {
 }
 
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {
+    private var loginService: LoginServiceProtocol
+    private var networkDataService: NetworkDataServiceProtocol
+    
+    init(loginService: LoginServiceProtocol, networkDataService: NetworkDataServiceProtocol) {
+        self.loginService = loginService
+        self.networkDataService = networkDataService
+    }
+    
     func createLoginModule(router: RouterProtocol) -> UIViewController {
         let view = LoginViewController()
-        let loginService = LoginService()
         view.router = router
-        view.loginService = loginService
+        view.loginService = self.loginService
         return view
     }
     
     func createTabBarModule(router: RouterProtocol) -> UIViewController {
-        TabBarViewController(mapViewController: createMapModule(), scheduleViewController: createScheduleModule(), settingsViewController: createSettingsModule(loginService: LoginService(), router: router), router: router)
+        TabBarViewController(mapViewController: createMapModule(), scheduleViewController: createScheduleModule(), settingsViewController: createSettingsModule(loginService: self.loginService, router: router), router: router)
     }
     
     internal func createMapModule() -> UIViewController {
@@ -34,7 +41,7 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     
     internal func createScheduleModule() -> UIViewController {
         let view = PagedScheduleViewController()
-        let model = ScheduleModel()
+        let model = ScheduleModel(networkDataService: self.networkDataService)
         
         let presenter = ScheduleViewPresenter(view: view, model: model)
         view.presenter = presenter
@@ -44,7 +51,7 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     
     internal func createSettingsModule(loginService: LoginServiceProtocol, router: RouterProtocol) -> UIViewController {
         let settingsViewController = SettingsViewController()
-        settingsViewController.loginService = loginService
+        settingsViewController.loginService = self.loginService
         settingsViewController.router = router
         return settingsViewController
     }

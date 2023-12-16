@@ -8,6 +8,23 @@
 import UIKit
 import GoogleSignIn
 
+protocol LoginServiceProtocol {
+    static func checkAuth() -> Bool
+    func loginUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func loginViaGoogle(presentingView: UIViewController, completion: @escaping (Result<Void, Error>) -> Void)
+    func createAccount(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func resetPassword(email: String, completion: @escaping (Result<Void, Error>) -> Void) 
+    func signOut()
+}
+
+protocol NetworkDataInitializerProtocol {
+    func configure()
+}
+
+protocol NetworkDataServiceProtocol {
+    func getData(completion: @escaping ((Data) -> Void))
+}
+
 protocol LoginViewControllerProtocol {
     func loginUser(email: String, password: String)
     func success()

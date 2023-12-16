@@ -7,11 +7,7 @@
 
 import Firebase
 
-protocol NetworkDataServiceProtocol {
-    func getData(completion: @escaping ((Data) -> Void))
-}
-
-class NetworkDataService: NetworkDataServiceProtocol {
+class FirebaseNetworkDataService: NetworkDataServiceProtocol {
     private enum Constants {
         static let childPathToData: String = "bus_schedule"
         static let labelOfQueue: String = "Dubovozki app"
