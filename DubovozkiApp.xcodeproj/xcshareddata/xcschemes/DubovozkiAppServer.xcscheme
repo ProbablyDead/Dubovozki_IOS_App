@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0AE5B292B18B3F8002DC427"
-               BuildableName = "DubovozkiApp.app"
-               BlueprintName = "DubovozkiApp"
+               BlueprintIdentifier = "C04AD01B2B2E0A9E0069089B"
+               BuildableName = "DubovozkiAppServer.app"
+               BlueprintName = "DubovozkiAppServer"
                ReferencedContainer = "container:DubovozkiApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,19 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C040B4902B1B61190022EF75"
-               BuildableName = "DubovozkiAppTests.xctest"
-               BlueprintName = "DubovozkiAppTests"
-               ReferencedContainer = "container:DubovozkiApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,9 +43,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0AE5B292B18B3F8002DC427"
-            BuildableName = "DubovozkiApp.app"
-            BlueprintName = "DubovozkiApp"
+            BlueprintIdentifier = "C04AD01B2B2E0A9E0069089B"
+            BuildableName = "DubovozkiAppServer.app"
+            BlueprintName = "DubovozkiAppServer"
             ReferencedContainer = "container:DubovozkiApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,9 +60,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0AE5B292B18B3F8002DC427"
-            BuildableName = "DubovozkiApp.app"
-            BlueprintName = "DubovozkiApp"
+            BlueprintIdentifier = "C04AD01B2B2E0A9E0069089B"
+            BuildableName = "DubovozkiAppServer.app"
+            BlueprintName = "DubovozkiAppServer"
             ReferencedContainer = "container:DubovozkiApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
