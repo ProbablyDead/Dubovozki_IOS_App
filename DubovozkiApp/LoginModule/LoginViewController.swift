@@ -7,8 +7,6 @@
 
 import UIKit
 import GoogleSignIn
-import GoogleSignInSwift
-import FirebaseAuth
 
 protocol LoginViewControllerProtocol {
     func loginUser(email: String, password: String)
@@ -204,8 +202,8 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func failure(error: Error) {
-        switch error._code {
-        case AuthErrorCode.userNotFound.rawValue:
+        switch error {
+        case LoginNetworkError.userNotFound:
             let alert = UIAlertController(title: "No such user",
                                           message: "Create an account?",
                                           preferredStyle: .alert)
@@ -215,15 +213,22 @@ extension LoginViewController: LoginViewControllerProtocol {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true)
             
-        case AuthErrorCode.invalidEmail.rawValue:
+        case LoginNetworkError.invalidEmail:
             let alert = UIAlertController(title: "Invalid email",
                                           message: "",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             
-        case AuthErrorCode.wrongPassword.rawValue:
+        case LoginNetworkError.wrongPassword:
             let alert = UIAlertController(title: "Wrong password",
+                                          message: "",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+        case LoginNetworkError.emailExists:
+            let alert = UIAlertController(title: "Email exists",
                                           message: "",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

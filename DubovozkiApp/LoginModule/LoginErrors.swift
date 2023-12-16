@@ -10,6 +10,7 @@ enum LoginNetworkError: Error {
     case emailExists
     case invalidEmail
     case wrongPassword
+    case networkError
     
     var value: String {
         switch self {
@@ -21,6 +22,8 @@ enum LoginNetworkError: Error {
             "INVALID_EMAIL"
         case .wrongPassword:
             "INVALID_PASSWORD"
+        case .networkError:
+            "NETWORK_ERROR"
         }
     }
 }
