@@ -46,18 +46,12 @@
 		C04AD03A2B2E0A9E0069089B /* WayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* WayCardView.swift */; };
 		C04AD03B2B2E0A9E0069089B /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */; };
-		C04AD03D2B2E0A9E0069089B /* NetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6942B2114DB003ED203 /* NetworkDataService.swift */; };
 		C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */; };
-		C04AD03F2B2E0A9E0069089B /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4462B18D54A0022EF75 /* LoginService.swift */; };
 		C04AD0402B2E0A9E0069089B /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18E02B22670E00CB2983 /* ScheduleModel.swift */; };
 		C04AD0412B2E0A9E0069089B /* PagedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A29D2B23ED560088D5A3 /* PagedView.swift */; };
-		C04AD0422B2E0A9E0069089B /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6962B211864003ED203 /* Initializer.swift */; };
-		C04AD0442B2E0A9E0069089B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C04AD01C2B2E0A9E0069089B /* FirebaseDatabase */; };
-		C04AD0452B2E0A9E0069089B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C04AD01E2B2E0A9E0069089B /* FirebaseAuth */; };
 		C04AD0462B2E0A9E0069089B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C04AD01F2B2E0A9E0069089B /* GoogleSignIn */; };
 		C04AD0472B2E0A9E0069089B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C04AD0212B2E0A9E0069089B /* GoogleSignInSwift */; };
 		C04AD0492B2E0A9E0069089B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C040B4422B18D29C0022EF75 /* README.md */; };
-		C04AD04A2B2E0A9E0069089B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */; };
 		C04AD04B2B2E0A9E0069089B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AE5B362B18B3FA002DC427 /* Assets.xcassets */; };
 		C056A2932B2372A90088D5A3 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2922B2372A90088D5A3 /* Filters.swift */; };
 		C056A2962B23C19D0088D5A3 /* ScheduleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2952B23C19D0088D5A3 /* ScheduleTableView.swift */; };
@@ -133,8 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C04AD0442B2E0A9E0069089B /* FirebaseDatabase in Frameworks */,
-				C04AD0452B2E0A9E0069089B /* FirebaseAuth in Frameworks */,
 				C04AD0462B2E0A9E0069089B /* GoogleSignIn in Frameworks */,
 				C04AD0472B2E0A9E0069089B /* GoogleSignInSwift in Frameworks */,
 			);
@@ -162,8 +154,9 @@
 				C0B7C6942B2114DB003ED203 /* NetworkDataService.swift */,
 				C0B7C6962B211864003ED203 /* Initializer.swift */,
 			);
-			path = Firebase;
-			sourceTree = "<group>";
+			name = Firebase;
+			path = DubovozkiApp/Services/Network/Firebase;
+			sourceTree = SOURCE_ROOT;
 		};
 		C01FBEC82B1E816400843189 /* TabBarModule */ = {
 			isa = PBXGroup;
@@ -391,8 +384,6 @@
 			);
 			name = DubovozkiAppServer;
 			packageProductDependencies = (
-				C04AD01C2B2E0A9E0069089B /* FirebaseDatabase */,
-				C04AD01E2B2E0A9E0069089B /* FirebaseAuth */,
 				C04AD01F2B2E0A9E0069089B /* GoogleSignIn */,
 				C04AD0212B2E0A9E0069089B /* GoogleSignInSwift */,
 			);
@@ -467,7 +458,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04AD0492B2E0A9E0069089B /* README.md in Resources */,
-				C04AD04A2B2E0A9E0069089B /* GoogleService-Info.plist in Resources */,
 				C04AD04B2B2E0A9E0069089B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,12 +505,9 @@
 				C04AD03A2B2E0A9E0069089B /* WayCardView.swift in Sources */,
 				C04AD03B2B2E0A9E0069089B /* Bus+CoreDataProperties.swift in Sources */,
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
-				C04AD03D2B2E0A9E0069089B /* NetworkDataService.swift in Sources */,
 				C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */,
-				C04AD03F2B2E0A9E0069089B /* LoginService.swift in Sources */,
 				C04AD0402B2E0A9E0069089B /* ScheduleModel.swift in Sources */,
 				C04AD0412B2E0A9E0069089B /* PagedView.swift in Sources */,
-				C04AD0422B2E0A9E0069089B /* Initializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,14 +841,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C04AD01D2B2E0A9E0069089B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.18.0;
-			};
-		};
 		C04AD0202B2E0A9E0069089B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -897,16 +876,6 @@
 		C040B4882B1A31110022EF75 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0AE5B462B18C4A3002DC427 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		C04AD01C2B2E0A9E0069089B /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C04AD01D2B2E0A9E0069089B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		C04AD01E2B2E0A9E0069089B /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C04AD01D2B2E0A9E0069089B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		C04AD01F2B2E0A9E0069089B /* GoogleSignIn */ = {
