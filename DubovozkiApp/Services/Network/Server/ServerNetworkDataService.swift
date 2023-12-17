@@ -18,15 +18,10 @@ class ServerNetworkDataService: NetworkDataServiceProtocol {
         if let url = URL(string: ServerNetworkConstants.getData) {
             var request = URLRequest(url: url)
             request.httpMethod = ServerNetworkConstants.get
-            request.addValue(ServerNetworkConstants.contentTypeValue, forHTTPHeaderField: ServerNetworkConstants.contentType)
+            request.addValue(ServerNetworkConstants.defaultContentTypeValue, forHTTPHeaderField: ServerNetworkConstants.contentType)
             
             let task = URLSession.shared.dataTask(with: request) { data, responce, error in
-                if let error = error {
-                    print(error)
-                    return
-                }
                 if let data = data {
-                    print(data)
                     completion(data)
                 }
             }
