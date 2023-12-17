@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let networkDataService = FirebaseNetworkDataService()
         #elseif Server
         let loginService = ServerLoginService()
+        loginService.keyChainService = KeyChainService()
         let networkDataService = ServerNetworkDataService()
         #endif
         

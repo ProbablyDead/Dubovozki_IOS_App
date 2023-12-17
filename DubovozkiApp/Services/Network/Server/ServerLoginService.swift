@@ -8,6 +8,12 @@
 import GoogleSignIn
 import UIKit
 
+protocol KeyChainServiceProtocol {
+    func save(idToken: String)
+    func check() -> Bool
+    func delete()
+}
+
 typealias Body = [String: String]
 
 private extension ServerNetworkConstants {
@@ -19,12 +25,14 @@ private extension ServerNetworkConstants {
 }
 
 class ServerLoginService: LoginServiceProtocol {
+    var keyChainService: KeyChainServiceProtocol?
+    
     func checkAuth() -> Bool {
-        return false
+        keyChainService?.check() ?? false
     }
     
     private func saveUser(idToken: String) {
-        print(idToken)
+        keyChainService?.save(idToken: idToken)
     }
     
     func loginViaGoogle(presentingView: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -108,5 +116,6 @@ class ServerLoginService: LoginServiceProtocol {
     }
     
     func signOut() {
+        keyChainService?.delete()
     }
 }

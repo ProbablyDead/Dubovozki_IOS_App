@@ -83,6 +83,7 @@
 		C0E2E8F52B2E7389009F2A48 /* ServerNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */; };
 		C0E2E8F72B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
 		C0E2E8F82B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
+		C0E2E8FB2B2EA03E009F2A48 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8FA2B2EA03E009F2A48 /* KeyChainService.swift */; };
 		C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkDataService.swift; sourceTree = "<group>"; };
 		C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkConstants.swift; sourceTree = "<group>"; };
 		C0E2E8F62B2E762C009F2A48 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C0E2E8FA2B2EA03E009F2A48 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -372,6 +374,7 @@
 		C0B7C6932B210631003ED203 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C0E2E8F92B2EA02B009F2A48 /* KeyChainService */,
 				C07F468F2B2153A7002E0B93 /* CoreData */,
 				C0AE5B452B18B4C2002DC427 /* Network */,
 			);
@@ -386,6 +389,14 @@
 				C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		C0E2E8F92B2EA02B009F2A48 /* KeyChainService */ = {
+			isa = PBXGroup;
+			children = (
+				C0E2E8FA2B2EA03E009F2A48 /* KeyChainService.swift */,
+			);
+			path = KeyChainService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +544,7 @@
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
 				C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */,
 				C04AD0402B2E0A9E0069089B /* ScheduleModel.swift in Sources */,
+				C0E2E8FB2B2EA03E009F2A48 /* KeyChainService.swift in Sources */,
 				C04AD0412B2E0A9E0069089B /* PagedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
