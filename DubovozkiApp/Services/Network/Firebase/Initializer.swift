@@ -7,11 +7,7 @@
 
 import Firebase
 
-protocol NetworkDataInitializerProtocol {
-    func configure()
-}
-
-class NetworkDataInitializer: NetworkDataInitializerProtocol {
+class FirebaseNetworkDataInitializer: NetworkDataInitializerProtocol {
     func configure() {
         FirebaseApp.configure()
     }

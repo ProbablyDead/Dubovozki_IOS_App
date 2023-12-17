@@ -12,6 +12,10 @@ protocol ModelProtocol {
 }
 
 class ScheduleModel: ModelProtocol {
+    init(networkDataService: NetworkDataServiceProtocol) {
+        Schedule.networkDataService = networkDataService
+    }
+    
     func getRawData(dataChanged: @escaping ([Bus]) -> Void) -> [Bus]? {
         Schedule.getRawData { newSchedule in
             dataChanged(newSchedule)

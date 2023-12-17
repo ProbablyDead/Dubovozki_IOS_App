@@ -9,16 +9,7 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 
-protocol LoginServiceProtocol {
-    static func checkAuth() -> Bool
-    func loginUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
-    func loginViaGoogle(presentingView: UIViewController, completion: @escaping (Result<Void, Error>) -> Void)
-    func createAccount(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
-    func resetPassword(email: String, completion: @escaping (Result<Void, Error>) -> Void) 
-    func signOut()
-}
-
-class LoginService: LoginServiceProtocol {
+class FirebaseLoginService: LoginServiceProtocol {
     
     static func chooseError(error: Error) -> LoginNetworkError {
         switch error._code {
@@ -35,7 +26,7 @@ class LoginService: LoginServiceProtocol {
         }
     }
     
-    static func checkAuth() -> Bool {
+    func checkAuth() -> Bool {
         Firebase.Auth.auth().currentUser != nil
     }
     

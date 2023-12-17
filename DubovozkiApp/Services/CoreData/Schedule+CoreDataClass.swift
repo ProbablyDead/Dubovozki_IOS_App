@@ -36,7 +36,7 @@ extension CodingUserInfoKey {
 
 @objc(Schedule)
 public class Schedule: NSManagedObject, Codable {
-    static let networkDataService: NetworkDataServiceProtocol = NetworkDataService()
+    static var networkDataService: NetworkDataServiceProtocol?
     static let applicationDelegate = UIApplication.shared.delegate as! AppDelegate
     static let context: NSManagedObjectContext = applicationDelegate.persistentContainer.viewContext
     static let backgroundContext: NSManagedObjectContext = applicationDelegate.backgroundContext
