@@ -30,8 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #endif
         
         let navigationController = UINavigationController()
-        let assmblyBuilder = AssemblyModuleBuilder(loginService: loginService, networkDataService: networkDataService)
-        let router = Router(navigationController: navigationController, assemblyBuilder: assmblyBuilder)
+        let assemblyBuilder = AssemblyModuleBuilder(loginService: loginService, networkDataService: networkDataService)
+        let router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)
         
         router.tabBarViewController()
         
