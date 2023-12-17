@@ -80,6 +80,9 @@
 		C0D4B9C02B22AC380074D364 /* BusCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D4B9BF2B22AC380074D364 /* BusCellView.swift */; };
 		C0E2E8F12B2E65E9009F2A48 /* ServerLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F02B2E65E9009F2A48 /* ServerLoginService.swift */; };
 		C0E2E8F32B2E67A6009F2A48 /* ServerNetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */; };
+		C0E2E8F52B2E7389009F2A48 /* ServerNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */; };
+		C0E2E8F72B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
+		C0E2E8F82B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
 		C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +126,8 @@
 		C0D4B9BF2B22AC380074D364 /* BusCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCellView.swift; sourceTree = "<group>"; };
 		C0E2E8F02B2E65E9009F2A48 /* ServerLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLoginService.swift; sourceTree = "<group>"; };
 		C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkDataService.swift; sourceTree = "<group>"; };
+		C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkConstants.swift; sourceTree = "<group>"; };
+		C0E2E8F62B2E762C009F2A48 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +292,7 @@
 		C0AE5B212B18B3F8002DC427 = {
 			isa = PBXGroup;
 			children = (
+				C0E2E8F62B2E762C009F2A48 /* LICENSE */,
 				C040B4422B18D29C0022EF75 /* README.md */,
 				C0AE5B2C2B18B3F8002DC427 /* DubovozkiApp */,
 				C0AE5B2B2B18B3F8002DC427 /* Products */,
@@ -377,6 +383,7 @@
 			children = (
 				C0E2E8F02B2E65E9009F2A48 /* ServerLoginService.swift */,
 				C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */,
+				C0E2E8F42B2E7388009F2A48 /* ServerNetworkConstants.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -471,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E2E8F82B2E762C009F2A48 /* LICENSE in Resources */,
 				C04AD0492B2E0A9E0069089B /* README.md in Resources */,
 				C04AD04B2B2E0A9E0069089B /* Assets.xcassets in Resources */,
 			);
@@ -482,6 +490,7 @@
 			files = (
 				C040B4432B18D29C0022EF75 /* README.md in Resources */,
 				C010767F2B2E020F00B34BD5 /* GoogleService-Info.plist in Resources */,
+				C0E2E8F72B2E762C009F2A48 /* LICENSE in Resources */,
 				C0AE5B372B18B3FA002DC427 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +523,7 @@
 				C04AD0342B2E0A9E0069089B /* BusCellView.swift in Sources */,
 				C04AD0352B2E0A9E0069089B /* ScheduleModel.xcdatamodeld in Sources */,
 				C04AD0362B2E0A9E0069089B /* TabView.swift in Sources */,
+				C0E2E8F52B2E7389009F2A48 /* ServerNetworkConstants.swift in Sources */,
 				C04AD0372B2E0A9E0069089B /* SettingsViewController.swift in Sources */,
 				C04AD0382B2E0A9E0069089B /* LoginViewController.swift in Sources */,
 				C04AD0392B2E0A9E0069089B /* SelectButton.swift in Sources */,

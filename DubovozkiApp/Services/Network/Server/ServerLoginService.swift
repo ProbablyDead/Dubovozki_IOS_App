@@ -8,12 +8,19 @@
 import Foundation
 import UIKit
 
+private extension ServerNetworkConstants {
+    private static let auth: String = "auth/"
+    
+    static let loginUserString: String = hostname + auth + "signIn"
+}
+
 class ServerLoginService: LoginServiceProtocol {
     func checkAuth() -> Bool {
         return true
     }
     
     func loginUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        
     }
     
     func loginViaGoogle(presentingView: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -28,5 +35,7 @@ class ServerLoginService: LoginServiceProtocol {
     func signOut() {
     }
     
-    
+    func saveUser() {
+        
+    }
 }
