@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ServerLoginService: LoginServiceProtocol {
-    static func checkAuth() -> Bool {
+    func checkAuth() -> Bool {
         return true
     }
     

@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         router.tabBarViewController()
         
-        if !type(of: loginService).checkAuth() {
+        if !loginService.checkAuth() {
             router.loginViewController()
         }
         

@@ -9,7 +9,7 @@ import UIKit
 import GoogleSignIn
 
 protocol LoginServiceProtocol {
-    static func checkAuth() -> Bool
+    func checkAuth() -> Bool
     func loginUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
     func loginViaGoogle(presentingView: UIViewController, completion: @escaping (Result<Void, Error>) -> Void)
     func createAccount(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)

@@ -26,7 +26,7 @@ class FirebaseLoginService: LoginServiceProtocol {
         }
     }
     
-    static func checkAuth() -> Bool {
+    func checkAuth() -> Bool {
         Firebase.Auth.auth().currentUser != nil
     }
     
