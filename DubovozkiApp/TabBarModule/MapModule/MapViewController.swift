@@ -15,20 +15,28 @@ class MapViewController: UIViewController {
         static let navItemName: String = "Routes"
         
         static let slavyanskiyTitle: String = Filters.station.slv.title
+        static let slavyanskiyTravelTime: Int = 30
         static let slavyanskiyImageName: String = "slavyanskyBlvdEntry"
         
-        static let molodejkaTitle: String = Filters.station.mld.title
-        static let molodejkaImageName: String = "slavyanskyBlvdEntry"
+        static let molodezhnayaTitle: String = Filters.station.mld.title
+        static let molodezhnayaTravelTime: Int = 30
+        static let molodezhnayaImageName: String = "molodezhnayaEntry"
         
         static let odintsovoTitle: String = Filters.station.odn.title
-        static let odintsovoImageName: String = "slavyanskyBlvdEntry"
+        static let odintsovoTravelTime: Int = 15
+        static let odintsovoImageName: String = "odintsovoEntry"
     }
     
-    private lazy var slavyansky: WayCardView = WayCardView(title: Constants.slavyanskiyTitle, backGroundImageName: Constants.slavyanskiyImageName)
-    private lazy var molodejnaya: WayCardView = WayCardView(title: Constants.molodejkaTitle, backGroundImageName: Constants.molodejkaImageName)
-    private lazy var odintsovo: WayCardView = WayCardView(title: Constants.odintsovoTitle, backGroundImageName: Constants.odintsovoImageName)
+    private lazy var slavyansky: WayCardView = WayCardView(title: Constants.slavyanskiyTitle,
+                                                           travelTime: Constants.slavyanskiyTravelTime,
+                                                           backGroundImageName: Constants.slavyanskiyImageName)
     
-    private lazy var arrangedCardViews: [UIView] = [self.slavyansky, self.molodejnaya, self.odintsovo]
+    private lazy var molodezhnaya: WayCardView = WayCardView(title: Constants.molodezhnayaTitle,
+                                                             travelTime: Constants.molodezhnayaTravelTime,
+                                                            backGroundImageName: Constants.molodezhnayaImageName)
+    private lazy var odintsovo: WayCardView = WayCardView(title: Constants.odintsovoTitle, travelTime: Constants.odintsovoTravelTime, backGroundImageName: Constants.odintsovoImageName)
+    
+    private lazy var arrangedCardViews: [UIView] = [self.slavyansky, self.molodezhnaya, self.odintsovo]
     
     private lazy var stackView: UIStackView = {
         let controller = UIStackView()
