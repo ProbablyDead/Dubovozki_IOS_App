@@ -33,7 +33,7 @@ class TabBarViewController: UITabBarController {
         var title: String {
             switch self {
             case .map:
-                "Map"
+                "Stations"
             case .schedule:
                 "Schedule"
             case .settings:

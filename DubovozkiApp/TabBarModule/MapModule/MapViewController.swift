@@ -12,7 +12,7 @@ class MapViewController: UIViewController {
         static let sideStackViewOffset: CGFloat = 5
         static let spacing: CGFloat = 5
         
-        static let navItemName: String = "Routes"
+        static let navItemTitle: String = "Routes"
         
         static let slavyanskiyTitle: String = Filters.station.slv.title
         static let slavyanskiyTravelTime: Int = 30
@@ -57,7 +57,6 @@ class MapViewController: UIViewController {
     }
         
     private func configureUI() {
-        navigationItem.title = Constants.navItemName
         view.backgroundColor = .systemBackground
         view.addSubview(stackView)
         
@@ -67,6 +66,9 @@ class MapViewController: UIViewController {
         stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = Constants.navItemTitle
+    }
 }
 
