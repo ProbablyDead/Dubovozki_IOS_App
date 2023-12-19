@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class StationsViewController: UIViewController {
     private enum Constants {
         static let sideStackViewOffset: CGFloat = 5
         static let spacing: CGFloat = 5

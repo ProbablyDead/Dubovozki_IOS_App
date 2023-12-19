@@ -36,7 +36,7 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     }
     
     internal func createMapModule() -> UIViewController {
-        MapViewController()
+        StationsViewController()
     }
     
     internal func createScheduleModule() -> UIViewController {
