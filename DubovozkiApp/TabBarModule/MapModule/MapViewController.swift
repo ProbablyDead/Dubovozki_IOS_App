@@ -8,58 +8,57 @@
 import UIKit
 
 class MapViewController: UIViewController {
+    private enum Constants {
+        static let sideStackViewOffset: CGFloat = 5
+        static let spacing: CGFloat = 5
+        
+        static let navItemName: String = "Routes"
+        
+        static let slavyanskiyTitle: String = Filters.station.slv.title
+        static let slavyanskiyImageName: String = "slavyanskyBlvdEntry"
+        
+        static let molodejkaTitle: String = Filters.station.mld.title
+        static let molodejkaImageName: String = "slavyanskyBlvdEntry"
+        
+        static let odintsovoTitle: String = Filters.station.odn.title
+        static let odintsovoImageName: String = "slavyanskyBlvdEntry"
+    }
     
-    private let cardView: WayCardView = WayCardView(title: "Slavyansky", image: "Slavyansky Bulvar Enterance")
-
-    private lazy var navButton: UIButton = {
-        let controller = UIButton()
-        controller.setTitle("View in maps", for: .normal)
-        controller.backgroundColor = .app
+    private lazy var slavyansky: WayCardView = WayCardView(title: Constants.slavyanskiyTitle, backGroundImageName: Constants.slavyanskiyImageName)
+    private lazy var molodejnaya: WayCardView = WayCardView(title: Constants.molodejkaTitle, backGroundImageName: Constants.molodejkaImageName)
+    private lazy var odintsovo: WayCardView = WayCardView(title: Constants.odintsovoTitle, backGroundImageName: Constants.odintsovoImageName)
+    
+    private lazy var arrangedCardViews: [UIView] = [self.slavyansky, self.molodejnaya, self.odintsovo]
+    
+    private lazy var stackView: UIStackView = {
+        let controller = UIStackView()
         controller.translatesAutoresizingMaskIntoConstraints = false
-        controller.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        controller.distribution = .fillEqually
+        controller.alignment = .fill
+        controller.axis = .vertical
+        controller.spacing = Constants.spacing
+        
+        arrangedCardViews.forEach { controller.addArrangedSubview($0) }
         return controller
     }()
     
-    @objc
-    private func buttonPressed(_ sender: UIButton) {
-        if let url = URL(string: "https://yandex.ru/maps/-/CDqJJLNi") {
-            UIApplication.shared.open(url)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureUI()
     }
-    
+        
     private func configureUI() {
+        navigationItem.title = Constants.navItemName
         view.backgroundColor = .systemBackground
-//        view.addSubview(navButton)
-//        view.addSubview(wayCard)
+        view.addSubview(stackView)
         
-//        wayCard.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        wayCard.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-//        wayCard.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        wayCard.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-//        if let im = UIImage(named: "Slavyansky Bulvar Enterance") {
-//            let imV = UIImageView(image: im)
-//            imV.frame = CGRect(x: 0, y: 10, width: view.bounds.width, height: view.bounds.height/2)
-//            imV.addSubview(navButton)
-//            navButton.centerXAnchor.constraint(equalTo: imV.centerXAnchor).isActive = true
-//            navButton.centerYAnchor.constraint(equalTo: imV.centerYAnchor).isActive = true
-//            view.addSubview(imV)
-            
-//            imV.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//            imV.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-//            imV.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//            imV.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        }
-        
-        view.addSubview(cardView)
-        cardView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        cardView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        cardView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor).isActive = true
-        cardView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.sideStackViewOffset).isActive = true
+        stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -Constants.sideStackViewOffset).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
+    
+    
 }
+

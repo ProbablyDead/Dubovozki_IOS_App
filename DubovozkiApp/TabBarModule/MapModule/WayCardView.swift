@@ -8,27 +8,23 @@
 import UIKit
 
 class WayCardView: UIView {
-    private let imageView: UIImageView! = {
-        let controller = UIImageView()
-        controller.translatesAutoresizingMaskIntoConstraints = false
-        controller.contentMode = .scaleAspectFit
-        controller.clipsToBounds = true
-        return controller
-    }()
+    private enum Constants {
+        static let textSize: CGFloat = 34
+        static let cornerRadius: CGFloat = 15
+        static let textOffset: CGFloat = 7
+    }
     
-    private let titleLabel: UILabel! = {
+    private let titleLabel: UILabel = {
         let controller = UILabel()
         controller.translatesAutoresizingMaskIntoConstraints = false
-        controller.font = .systemFont(ofSize: 24)
+        controller.textColor = .white
         controller.backgroundColor = .clear
+        controller.font = .systemFont(ofSize: Constants.textSize)
         return controller
     }()
     
-    init(title: String, image: String) {
-        if let image = UIImage(named: image) {
-            imageView.image = image
-        }
-        titleLabel.text = title
+    init(title: String, backGroundImageName: String) {
+        self.titleLabel.text = title
         super.init(frame: .zero)
         
         configureUI()
@@ -39,15 +35,14 @@ class WayCardView: UIView {
     }
     
     private func configureUI() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        contentMode = .scaleToFill
+        backgroundColor = .systemPink
+        layer.cornerRadius = Constants.cornerRadius
         clipsToBounds = true
-        translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(imageView)
         addSubview(titleLabel)
         
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: Constants.textOffset).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.textOffset).isActive = true
+//        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }
