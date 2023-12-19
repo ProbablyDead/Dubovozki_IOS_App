@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WayCardView: UIView {
+class RouteCardView: UIView {
     private enum Constants {
         static let textSize: CGFloat = 34
         static let cornerRadius: CGFloat = 15

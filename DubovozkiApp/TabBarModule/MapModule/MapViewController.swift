@@ -27,14 +27,14 @@ class MapViewController: UIViewController {
         static let odintsovoImageName: String = "odintsovoEntry"
     }
     
-    private lazy var slavyansky: WayCardView = WayCardView(title: Constants.slavyanskiyTitle,
+    private lazy var slavyansky: RouteCardView = RouteCardView(title: Constants.slavyanskiyTitle,
                                                            travelTime: Constants.slavyanskiyTravelTime,
                                                            backGroundImageName: Constants.slavyanskiyImageName)
     
-    private lazy var molodezhnaya: WayCardView = WayCardView(title: Constants.molodezhnayaTitle,
+    private lazy var molodezhnaya: RouteCardView = RouteCardView(title: Constants.molodezhnayaTitle,
                                                              travelTime: Constants.molodezhnayaTravelTime,
                                                             backGroundImageName: Constants.molodezhnayaImageName)
-    private lazy var odintsovo: WayCardView = WayCardView(title: Constants.odintsovoTitle, travelTime: Constants.odintsovoTravelTime, backGroundImageName: Constants.odintsovoImageName)
+    private lazy var odintsovo: RouteCardView = RouteCardView(title: Constants.odintsovoTitle, travelTime: Constants.odintsovoTravelTime, backGroundImageName: Constants.odintsovoImageName)
     
     private lazy var arrangedCardViews: [UIView] = [self.slavyansky, self.molodezhnaya, self.odintsovo]
     

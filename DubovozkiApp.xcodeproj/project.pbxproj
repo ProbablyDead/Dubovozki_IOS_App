@@ -43,7 +43,7 @@
 		C04AD0372B2E0A9E0069089B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */; };
 		C04AD0382B2E0A9E0069089B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4A52B1CC3E50022EF75 /* LoginViewController.swift */; };
 		C04AD0392B2E0A9E0069089B /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */; };
-		C04AD03A2B2E0A9E0069089B /* WayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* WayCardView.swift */; };
+		C04AD03A2B2E0A9E0069089B /* RouteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */; };
 		C04AD03B2B2E0A9E0069089B /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */; };
 		C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */; };
@@ -70,7 +70,7 @@
 		C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
 		C09B18BB2B21D47D00CB2983 /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B72B21D47D00CB2983 /* Schedule+CoreDataProperties.swift */; };
 		C09B18E12B22670E00CB2983 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18E02B22670E00CB2983 /* ScheduleModel.swift */; };
-		C0A45B1C2B28974400F8BCF5 /* WayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* WayCardView.swift */; };
+		C0A45B1C2B28974400F8BCF5 /* RouteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */; };
 		C0AE5B2E2B18B3F8002DC427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B2D2B18B3F8002DC427 /* AppDelegate.swift */; };
 		C0AE5B302B18B3F8002DC427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B2F2B18B3F8002DC427 /* SceneDelegate.swift */; };
 		C0AE5B322B18B3F8002DC427 /* PagedScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B312B18B3F8002DC427 /* PagedScheduleViewController.swift */; };
@@ -116,7 +116,7 @@
 		C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C09B18B72B21D47D00CB2983 /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09B18E02B22670E00CB2983 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
-		C0A45B1B2B28974400F8BCF5 /* WayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayCardView.swift; sourceTree = "<group>"; };
+		C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCardView.swift; sourceTree = "<group>"; };
 		C0AE5B2A2B18B3F8002DC427 /* DubovozkiAppFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubovozkiAppFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AE5B2D2B18B3F8002DC427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0AE5B2F2B18B3F8002DC427 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C01FBECF2B1E87FB00843189 /* MapViewController.swift */,
-				C0A45B1B2B28974400F8BCF5 /* WayCardView.swift */,
+				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
 			);
 			path = MapModule;
 			sourceTree = "<group>";
@@ -538,7 +538,7 @@
 				C04AD0372B2E0A9E0069089B /* SettingsViewController.swift in Sources */,
 				C04AD0382B2E0A9E0069089B /* LoginViewController.swift in Sources */,
 				C04AD0392B2E0A9E0069089B /* SelectButton.swift in Sources */,
-				C04AD03A2B2E0A9E0069089B /* WayCardView.swift in Sources */,
+				C04AD03A2B2E0A9E0069089B /* RouteCardView.swift in Sources */,
 				C04AD03B2B2E0A9E0069089B /* Bus+CoreDataProperties.swift in Sources */,
 				C0E2E8F12B2E65E9009F2A48 /* ServerLoginService.swift in Sources */,
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
@@ -576,7 +576,7 @@
 				C01FBECE2B1E87EC00843189 /* SettingsViewController.swift in Sources */,
 				C040B4A62B1CC3E50022EF75 /* LoginViewController.swift in Sources */,
 				C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */,
-				C0A45B1C2B28974400F8BCF5 /* WayCardView.swift in Sources */,
+				C0A45B1C2B28974400F8BCF5 /* RouteCardView.swift in Sources */,
 				C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */,
 				C01FBECA2B1E81AF00843189 /* TabBarViewController.swift in Sources */,
 				C0B7C6952B2114DB003ED203 /* FirebaseNetworkDataService.swift in Sources */,
