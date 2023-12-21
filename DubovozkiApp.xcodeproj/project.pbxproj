@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C00060152B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */; };
-		C00060162B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */; };
 		C010767F2B2E020F00B34BD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */; };
 		C01FBECA2B1E81AF00843189 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */; };
 		C01FBECE2B1E87EC00843189 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */; };
@@ -87,11 +85,11 @@
 		C0E2E8F72B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
 		C0E2E8F82B2E762C009F2A48 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E2E8F62B2E762C009F2A48 /* LICENSE */; };
 		C0E2E8FB2B2EA03E009F2A48 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8FA2B2EA03E009F2A48 /* KeyChainService.swift */; };
+		C0E49B4E2B34BFDE006A3DE1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A9AC9F2B348D4D0041E676 /* Model.swift */; };
 		C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRouteInfoController.swift; sourceTree = "<group>"; };
 		C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -188,9 +186,8 @@
 		C01FBECB2B1E87C600843189 /* StationsModule */ = {
 			isa = PBXGroup;
 			children = (
-				C0E49B442B349B4E006A3DE1 /* Model */,
-				C0A9AC9D2B348C1C0041E676 /* MainScreen */,
-				C0A9AC9E2B348C290041E676 /* Additional */,
+				C0E49B4F2B34C012006A3DE1 /* Model */,
+				C0E49B502B34C018006A3DE1 /* View */,
 			);
 			path = StationsModule;
 			sourceTree = "<group>";
@@ -295,23 +292,6 @@
 				C07F46842B215204002E0B93 /* ScheduleModel.xcdatamodeld */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		C0A9AC9D2B348C1C0041E676 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C01FBECF2B1E87FB00843189 /* StationsViewController.swift */,
-				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		C0A9AC9E2B348C290041E676 /* Additional */ = {
-			isa = PBXGroup;
-			children = (
-				C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */,
-			);
-			path = Additional;
 			sourceTree = "<group>";
 		};
 		C0A9ACA32B3495A00041E676 /* GlobalConstants */ = {
@@ -430,12 +410,29 @@
 			path = KeyChainService;
 			sourceTree = "<group>";
 		};
-		C0E49B442B349B4E006A3DE1 /* Model */ = {
+		C0E49B4D2B34A4B9006A3DE1 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C01FBECF2B1E87FB00843189 /* StationsViewController.swift */,
+				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		C0E49B4F2B34C012006A3DE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C0A9AC9F2B348D4D0041E676 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0E49B502B34C018006A3DE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0E49B4D2B34A4B9006A3DE1 /* MainScreen */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,7 +553,6 @@
 				C04AD0242B2E0A9E0069089B /* Filters.swift in Sources */,
 				C04AD0252B2E0A9E0069089B /* LoginErrors.swift in Sources */,
 				C04AD0262B2E0A9E0069089B /* Bus+CoreDataClass.swift in Sources */,
-				C00060162B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */,
 				C04AD0272B2E0A9E0069089B /* TabbedView.swift in Sources */,
 				C04AD0282B2E0A9E0069089B /* TabCollectionViewCell.swift in Sources */,
 				C04AD0292B2E0A9E0069089B /* Router.swift in Sources */,
@@ -580,6 +576,7 @@
 				C04AD0392B2E0A9E0069089B /* SelectButton.swift in Sources */,
 				C04AD03A2B2E0A9E0069089B /* RouteCardView.swift in Sources */,
 				C04AD03B2B2E0A9E0069089B /* Bus+CoreDataProperties.swift in Sources */,
+				C0E49B4E2B34BFDE006A3DE1 /* Model.swift in Sources */,
 				C0E2E8F12B2E65E9009F2A48 /* ServerLoginService.swift in Sources */,
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
 				C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */,
@@ -616,7 +613,6 @@
 				C056A2AA2B2409440088D5A3 /* TabView.swift in Sources */,
 				C01FBECE2B1E87EC00843189 /* SettingsViewController.swift in Sources */,
 				C040B4A62B1CC3E50022EF75 /* LoginViewController.swift in Sources */,
-				C00060152B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */,
 				C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */,
 				C0A45B1C2B28974400F8BCF5 /* RouteCardView.swift in Sources */,
 				C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */,

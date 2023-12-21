@@ -12,14 +12,25 @@ fileprivate enum RouteTypes: String {
     case molodezhnayaRoute = "Molodezhnaya"
     case slavyanskyRoute = "Slavyansky Blvd"
     
-    var image: UIImage {
+    var imageName: String {
         switch self {
         case .odintsovoRoute:
-            UIImage(named: "odintsovoEntry") ?? UIImage()
+            "odintsovoEntry"
         case .molodezhnayaRoute:
-            UIImage(named: "molodezhnayaEntry") ?? UIImage()
+            "molodezhnayaEntry"
         case .slavyanskyRoute:
-            UIImage(named: "slavyanskyBlvdEntry") ?? UIImage()
+            "slavyanskyBlvdEntry"
+        }
+    }
+    
+    var travelTime: Int {
+        switch self {
+        case .odintsovoRoute:
+            15
+        case .molodezhnayaRoute:
+            30
+        case .slavyanskyRoute:
+            30
         }
     }
 }
@@ -60,11 +71,22 @@ struct Station {
 }
 
 struct Route {
+    let name: String
+    let imageName: String
+    
+    let travelTime: Int
+    
+    let stationTo: Station
+    let stationFrom: Station
+}
+
+extension Route {
     private static let to: String = "To "
     
     static let routes: [Route] = [
         Route(name: RouteTypes.slavyanskyRoute.rawValue,
-              image: RouteTypes.slavyanskyRoute.image,
+              imageName: RouteTypes.slavyanskyRoute.imageName,
+              travelTime: RouteTypes.slavyanskyRoute.travelTime,
               stationTo: Station(name: to + StationTypes.slavyanskyStation.name,
                                  image: StationTypes.dubkiStation.image,
                                  linkToMaps: StationTypes.dubkiStation.link),
@@ -73,7 +95,8 @@ struct Route {
                                  linkToMaps: StationTypes.slavyanskyStation.link)),
         
         Route(name: StationTypes.molodezhkaStation.name,
-              image: RouteTypes.molodezhnayaRoute.image,
+              imageName: RouteTypes.molodezhnayaRoute.imageName,
+              travelTime: RouteTypes.molodezhnayaRoute.travelTime,
               stationTo: Station(name: to + StationTypes.molodezhkaStation.name,
                                  image: StationTypes.dubkiToMldStation.image,
                                  linkToMaps: StationTypes.dubkiToMldStation.link),
@@ -82,7 +105,8 @@ struct Route {
                                  linkToMaps: StationTypes.molodezhkaStation.link)),
         
         Route(name: StationTypes.odintsovoStation.name,
-              image: RouteTypes.odintsovoRoute.image,
+              imageName: RouteTypes.odintsovoRoute.imageName,
+              travelTime: RouteTypes.odintsovoRoute.travelTime,
               stationTo: Station(name: to + StationTypes.odintsovoStation.name,
                                  image: StationTypes.dubkiStation.image,
                                  linkToMaps: StationTypes.dubkiStation.link),
@@ -90,11 +114,4 @@ struct Route {
                                  image: StationTypes.odintsovoStation.image,
                                  linkToMaps: StationTypes.odintsovoStation.link)),
     ]
-    
-    let name: String
-    let image: UIImage
-    
-    let stationTo: Station
-    let stationFrom: Station
 }
-

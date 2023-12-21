@@ -13,30 +13,13 @@ class StationsViewController: UIViewController {
         static let spacing: CGFloat = 5
         
         static let navItemTitle: String = "Routes"
-        
-        static let slavyanskiyTitle: String = Filters.station.slv.title
-        static let slavyanskiyTravelTime: Int = 30
-        static let slavyanskiyImageName: String = "slavyanskyBlvdEntry"
-        
-        static let molodezhnayaTitle: String = Filters.station.mld.title
-        static let molodezhnayaTravelTime: Int = 30
-        static let molodezhnayaImageName: String = "molodezhnayaEntry"
-        
-        static let odintsovoTitle: String = Filters.station.odn.title
-        static let odintsovoTravelTime: Int = 15
-        static let odintsovoImageName: String = "odintsovoEntry"
     }
     
-    private lazy var slavyansky: RouteCardView = RouteCardView(title: Constants.slavyanskiyTitle,
-                                                           travelTime: Constants.slavyanskiyTravelTime,
-                                                           backGroundImageName: Constants.slavyanskiyImageName)
+    private let routes: [Route] = Route.routes
     
-    private lazy var molodezhnaya: RouteCardView = RouteCardView(title: Constants.molodezhnayaTitle,
-                                                             travelTime: Constants.molodezhnayaTravelTime,
-                                                            backGroundImageName: Constants.molodezhnayaImageName)
-    private lazy var odintsovo: RouteCardView = RouteCardView(title: Constants.odintsovoTitle, travelTime: Constants.odintsovoTravelTime, backGroundImageName: Constants.odintsovoImageName)
-    
-    private lazy var arrangedCardViews: [UIView] = [self.slavyansky, self.molodezhnaya, self.odintsovo]
+    private lazy var arrangedCardViews: [UIView] = routes.map { RouteCardView(title: $0.name,
+                                                                              travelTime: $0.travelTime,
+                                                                              backGroundImageName: $0.imageName) }
     
     private lazy var stackView: UIStackView = {
         let controller = UIStackView()
