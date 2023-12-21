@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00060152B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */; };
+		C00060162B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */; };
 		C010767F2B2E020F00B34BD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */; };
 		C01FBECA2B1E81AF00843189 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */; };
 		C01FBECE2B1E87EC00843189 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */; };
@@ -88,6 +90,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalRouteInfoController.swift; sourceTree = "<group>"; };
 		C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -173,20 +176,21 @@
 			isa = PBXGroup;
 			children = (
 				C01FBECC2B1E87CF00843189 /* SettingsModule */,
-				C01FBECB2B1E87C600843189 /* MapModule */,
+				C01FBECB2B1E87C600843189 /* StationsModule */,
 				C040B49A2B1B660F0022EF75 /* ScheduleModule */,
 				C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */,
 			);
 			path = TabBarModule;
 			sourceTree = "<group>";
 		};
-		C01FBECB2B1E87C600843189 /* MapModule */ = {
+		C01FBECB2B1E87C600843189 /* StationsModule */ = {
 			isa = PBXGroup;
 			children = (
 				C01FBECF2B1E87FB00843189 /* StationsViewController.swift */,
 				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
+				C00060142B31F43400D3F27B /* AdditionalRouteInfoController.swift */,
 			);
-			path = MapModule;
+			path = StationsModule;
 			sourceTree = "<group>";
 		};
 		C01FBECC2B1E87CF00843189 /* SettingsModule */ = {
@@ -517,6 +521,7 @@
 				C04AD0242B2E0A9E0069089B /* Filters.swift in Sources */,
 				C04AD0252B2E0A9E0069089B /* LoginErrors.swift in Sources */,
 				C04AD0262B2E0A9E0069089B /* Bus+CoreDataClass.swift in Sources */,
+				C00060162B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */,
 				C04AD0272B2E0A9E0069089B /* TabbedView.swift in Sources */,
 				C04AD0282B2E0A9E0069089B /* TabCollectionViewCell.swift in Sources */,
 				C04AD0292B2E0A9E0069089B /* Router.swift in Sources */,
@@ -575,6 +580,7 @@
 				C056A2AA2B2409440088D5A3 /* TabView.swift in Sources */,
 				C01FBECE2B1E87EC00843189 /* SettingsViewController.swift in Sources */,
 				C040B4A62B1CC3E50022EF75 /* LoginViewController.swift in Sources */,
+				C00060152B31F43400D3F27B /* AdditionalRouteInfoController.swift in Sources */,
 				C0EB25A72B24A69B0028EBF2 /* SelectButton.swift in Sources */,
 				C0A45B1C2B28974400F8BCF5 /* RouteCardView.swift in Sources */,
 				C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */,
