@@ -67,6 +67,8 @@
 		C07F46862B215204002E0B93 /* ScheduleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07F46842B215204002E0B93 /* ScheduleModel.xcdatamodeld */; };
 		C086613A2B3591EC006F8365 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
 		C086613B2B3591EC006F8365 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
+		C08661402B35B48A006F8365 /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
+		C08661412B35B48A006F8365 /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
 		C09B18B82B21D47D00CB2983 /* Bus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */; };
 		C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
@@ -116,6 +118,7 @@
 		C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButtonCell.swift; sourceTree = "<group>"; };
 		C07F46852B215204002E0B93 /* ScheduleCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleCDModel.xcdatamodel; sourceTree = "<group>"; };
 		C08661392B3591EC006F8365 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
+		C086613F2B35B48A006F8365 /* AppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCell.swift; sourceTree = "<group>"; };
 		C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 			children = (
 				C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */,
 				C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */,
+				C086613F2B35B48A006F8365 /* AppearanceCell.swift */,
 			);
 			path = SettingsModule;
 			sourceTree = "<group>";
@@ -297,13 +301,6 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		C0A9ACA32B3495A00041E676 /* GlobalConstants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GlobalConstants;
-			sourceTree = "<group>";
-		};
 		C0AE5B212B18B3F8002DC427 = {
 			isa = PBXGroup;
 			children = (
@@ -333,7 +330,6 @@
 				C040B4A42B1CC3970022EF75 /* LoginModule */,
 				C0AE5B412B18B487002DC427 /* App */,
 				C040B4492B1A0BE10022EF75 /* Resources */,
-				C0A9ACA32B3495A00041E676 /* GlobalConstants */,
 			);
 			path = DubovozkiApp;
 			sourceTree = "<group>";
@@ -557,6 +553,7 @@
 				C04AD02B2B2E0A9E0069089B /* PagedScheduleViewController.swift in Sources */,
 				C04AD02C2B2E0A9E0069089B /* AppDelegate.swift in Sources */,
 				C04AD02D2B2E0A9E0069089B /* ModuleBuilder.swift in Sources */,
+				C08661412B35B48A006F8365 /* AppearanceCell.swift in Sources */,
 				C04AD02E2B2E0A9E0069089B /* SceneDelegate.swift in Sources */,
 				C04AD02F2B2E0A9E0069089B /* StationsViewController.swift in Sources */,
 				C04AD0302B2E0A9E0069089B /* Schedule+CoreDataClass.swift in Sources */,
@@ -598,6 +595,7 @@
 				C0AE5B322B18B3F8002DC427 /* PagedScheduleViewController.swift in Sources */,
 				C0AE5B2E2B18B3F8002DC427 /* AppDelegate.swift in Sources */,
 				C0A9ACA02B348D4D0041E676 /* Model.swift in Sources */,
+				C08661402B35B48A006F8365 /* AppearanceCell.swift in Sources */,
 				C040B49C2B1B90D90022EF75 /* ModuleBuilder.swift in Sources */,
 				C0AE5B302B18B3F8002DC427 /* SceneDelegate.swift in Sources */,
 				C086613A2B3591EC006F8365 /* AdditionalViewController.swift in Sources */,
