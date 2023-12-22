@@ -35,10 +35,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private enum Constants {
         static let logoImageName: String = "LogoImage"
         
-        static let emailPlaceholder: String = "Email"
-        static let passwordPlaceholder: String = "Password"
-        static let restorePasswordButtonText: String = "Forgot password?"
-        static let loginButtonText: String = "Login/Register"
+        static let emailPlaceholder: String = "Email".localized()
+        static let passwordPlaceholder: String = "Password".localized()
+        static let restorePasswordButtonText: String = "Forgot password?".localized()
+        static let loginButtonText: String = "Login/Register".localized()
         
         static let buttonCornerRadius: CGFloat = 5
         
@@ -221,31 +221,31 @@ extension LoginViewController: LoginViewControllerProtocol {
     func failure(error: Error) {
         switch error {
         case LoginNetworkError.userNotFound:
-            let alert = UIAlertController(title: "No such user",
-                                          message: "Create an account?",
+            let alert = UIAlertController(title: "No such user".localized(),
+                                          message: "Create an account?".localized(),
                                           preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Continue", style: .default) {[weak self] _ in
+            alert.addAction(UIAlertAction(title: "Continue".localized(), style: .default) {[weak self] _ in
                 self?.createUser()
             })
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
             self.present(alert, animated: true)
             
         case LoginNetworkError.invalidEmail:
-            let alert = UIAlertController(title: "Invalid email",
+            let alert = UIAlertController(title: "Invalid email".localized(),
                                           message: "",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             
         case LoginNetworkError.wrongPassword:
-            let alert = UIAlertController(title: "Wrong password",
+            let alert = UIAlertController(title: "Wrong password".localized(),
                                           message: "",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             
         case LoginNetworkError.emailExists:
-            let alert = UIAlertController(title: "Email exists",
+            let alert = UIAlertController(title: "Email exists".localized(),
                                           message: "",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -262,7 +262,7 @@ extension LoginViewController: LoginViewControllerProtocol {
             case .success():
                 self?.userLogged()
             case .failure(let error):
-                let alert = UIAlertController(title: "Registration error",
+                let alert = UIAlertController(title: "Registration error".localized(),
                                               message: "\(error)",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -296,11 +296,11 @@ extension LoginViewController: LoginViewControllerProtocol {
     }
     
     func resetPassword() {
-        let alert = UIAlertController(title: "Reset password",
-                                      message: "Send email with a password reset link?",
+        let alert = UIAlertController(title: "Reset password".localized(),
+                                      message: "Send email with a password reset link?".localized(),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Continue", style: .default) {[weak self] _ in
+        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Continue".localized(), style: .default) {[weak self] _ in
             self?.loginService.resetPassword(email: self?.emailTextField.text ?? "") { [weak self] result in
                 switch result {
                 case .success(()):

@@ -22,8 +22,8 @@ enum Filters {
         
         var title: String {
             switch self {
-            case .dbk: "to Dubki"
-            case .msk: "to Moscow"
+            case .dbk: "to Dubki".localized()
+            case .msk: "to Moscow".localized()
             }
         }
     }

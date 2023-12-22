@@ -20,7 +20,7 @@ class PagedScheduleViewController: UIViewController {
     let dubkiTableView: ScheduleTableView = ScheduleTableView()
     
     private lazy var stationSelector: SelectButton = {
-        let options: [(String, String)] = Filters.station.allCases.map { ($0.title, $0.rawValue) }
+        let options: [(String, String)] = Filters.station.allCases.map { ($0.title.localized(), $0.rawValue) }
         return SelectButton(opitions: options) {[weak self] str in
             if let date: String = self?.dateSelector.currentSelection {
                 self?.presenter.filterData(station: str, date: date)
@@ -28,7 +28,7 @@ class PagedScheduleViewController: UIViewController {
         }
     }()
     private lazy var dateSelector: SelectButton = {
-        let options: [(String, String)] = Filters.date.allCases.map { ($0.title, String($0.rawValue)) }
+        let options: [(String, String)] = Filters.date.allCases.map { ($0.title.localized(), String($0.rawValue)) }
         return SelectButton(opitions: options) {[weak self] str in
             if let station: String = self?.stationSelector.currentSelection {
                 self?.presenter.filterData(station: station, date: str)
@@ -40,8 +40,8 @@ class PagedScheduleViewController: UIViewController {
         let viewPager = ViewPager()
         
         viewPager.tabbedView.tabs = [
-            TabView(title: Filters.direction.msk.title),
-            TabView(title: Filters.direction.dbk.title),
+            TabView(title: Filters.direction.msk.title.localized()),
+            TabView(title: Filters.direction.dbk.title.localized()),
         ]
         
         mskTableView.dataSource = presenter as? UITableViewDataSource

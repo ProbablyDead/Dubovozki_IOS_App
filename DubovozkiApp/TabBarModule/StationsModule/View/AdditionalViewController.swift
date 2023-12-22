@@ -11,7 +11,7 @@ class AdditionalViewController: UIViewController {
     private enum Constants {
         static let spacing: CGFloat = 5
         static let sideStackViewOffset: CGFloat = 5
-        static let buttonName: String = "Open in maps"
+        static let buttonName: String = "Open in maps".localized()
         static let buttonCornerRadius: CGFloat = 5
     }
     
@@ -40,7 +40,7 @@ class AdditionalViewController: UIViewController {
     private var cardFrom: Station
     
     private lazy var cardToView: RouteCardView = {
-        let controller = RouteCardView(title: self.cardTo.name, travelTime: nil, backGroundImageName: self.cardTo.imageName)
+        let controller = RouteCardView(title: self.cardTo.name.localized(), travelTime: nil, backGroundImageName: self.cardTo.imageName)
         return controller
     }()
     

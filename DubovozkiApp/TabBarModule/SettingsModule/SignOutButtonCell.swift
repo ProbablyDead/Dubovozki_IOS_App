@@ -11,7 +11,7 @@ final class SignOutButtonCell: UITableViewCell {
     static let reuseID: String = "SignOutCell"
     
     private enum Constants {
-        static let buttonName = "Sign out"
+        static let buttonName = "Sign out".localized()
     }
     
     private lazy var button: UIButton = {

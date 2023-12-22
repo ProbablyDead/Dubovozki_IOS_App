@@ -74,11 +74,12 @@ class BusCell: UITableViewCell {
         let houres = difference/3600000
         let minutes: Int64 = (difference - 3600000 * houres)/60000
         
-        let houresStr = (houres != 0) ? "\(abs(houres))" + " h " : ""
-        let minutesStr = (minutes != 0) ? "\(abs(minutes))" + " min" : ""
+        let houresStr = (houres != 0) ? "\(abs(houres)) " + "h".localized() + " " : ""
+        let minutesStr = (minutes != 0) ? "\(abs(minutes)) " + "min".localized() : ""
         let combinedStr = houresStr + minutesStr
         
-        return (houres == 0 && minutes == 0) ? "Leaving now" : (difference < 0 ? combinedStr + " ago" : "in " + combinedStr)
+        return (houres == 0 && minutes == 0) ? "Leaving now".localized() :
+        (difference < 0 ? combinedStr + " " + "ago".localized() : "in".localized() + " " + combinedStr)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -94,7 +95,7 @@ class BusCell: UITableViewCell {
     func configureDefaultCell(time: Int64, timeString: String, station: Filters.station) {
         textLabel?.text = timeString
         
-        stationLabel.text = station.title
+        stationLabel.text = station.title.localized()
         leftTimeLabel.isHidden = true
         
         if station == .mld {

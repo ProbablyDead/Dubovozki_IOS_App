@@ -9,8 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     private enum Constants {
-        static let navItemTitle: String = "Settings"
-        static let signOutButtonTitle: String = "Sign out"
+        static let navItemTitle: String = "Settings".localized()
         static let numberOfItemsInMainSection: Int = 1
         static let numberOfItemsInSignOutSection: Int = 1
         static let numberOfSections: Int = 2

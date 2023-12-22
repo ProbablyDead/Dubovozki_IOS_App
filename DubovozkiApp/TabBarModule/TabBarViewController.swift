@@ -83,7 +83,7 @@ class TabBarViewController: UITabBarController {
         }
         
         self.viewControllers?.enumerated().forEach {
-            $1.tabBarItem.title = dataSource[$0].title
+            $1.tabBarItem.title = dataSource[$0].title.localized()
             $1.tabBarItem.image = UIImage(systemName: dataSource[$0].iconName)
         }
         

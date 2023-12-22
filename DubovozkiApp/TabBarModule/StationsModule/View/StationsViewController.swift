@@ -12,13 +12,13 @@ class StationsViewController: UIViewController {
         static let sideStackViewOffset: CGFloat = 5
         static let spacing: CGFloat = 5
         
-        static let navItemTitle: String = "Routes"
+        static let navItemTitle: String = "Routes".localized()
     }
     
     private let routes: [Route] = Route.routes
     
     private lazy var arrangedCardViews: [RouteCardView] = routes.enumerated().map { (index, element) in
-        let card = RouteCardView(title: element.name,
+        let card = RouteCardView(title: element.name.localized(),
                                  travelTime: element.travelTime,
                                  backGroundImageName: element.imageName)
         

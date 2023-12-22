@@ -71,6 +71,10 @@
 		C08661412B35B48A006F8365 /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
 		C08661442B35BC66006F8365 /* AppearanceSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661432B35BC66006F8365 /* AppearanceSaving.swift */; };
 		C08661452B35BC66006F8365 /* AppearanceSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661432B35BC66006F8365 /* AppearanceSaving.swift */; };
+		C086614D2B35CBDF006F8365 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C08661502B35CBDF006F8365 /* Localizable.strings */; };
+		C086614E2B35CBDF006F8365 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C08661502B35CBDF006F8365 /* Localizable.strings */; };
+		C08661532B35CC10006F8365 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661522B35CC10006F8365 /* Extension+String.swift */; };
+		C08661542B35CC10006F8365 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661522B35CC10006F8365 /* Extension+String.swift */; };
 		C09B18B82B21D47D00CB2983 /* Bus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */; };
 		C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
@@ -122,6 +126,9 @@
 		C08661392B3591EC006F8365 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		C086613F2B35B48A006F8365 /* AppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCell.swift; sourceTree = "<group>"; };
 		C08661432B35BC66006F8365 /* AppearanceSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSaving.swift; sourceTree = "<group>"; };
+		C086614F2B35CBDF006F8365 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C08661512B35CBE1006F8365 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C08661522B35CC10006F8365 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -312,6 +319,15 @@
 			path = Appearence;
 			sourceTree = "<group>";
 		};
+		C08661492B35CAEA006F8365 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C08661522B35CC10006F8365 /* Extension+String.swift */,
+				C08661502B35CBDF006F8365 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		C0AE5B212B18B3F8002DC427 = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +415,7 @@
 				C0E2E8F92B2EA02B009F2A48 /* KeyChainService */,
 				C07F468F2B2153A7002E0B93 /* CoreData */,
 				C0AE5B452B18B4C2002DC427 /* Network */,
+				C08661492B35CAEA006F8365 /* Localization */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -508,6 +525,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = C0AE5B212B18B3F8002DC427;
 			packageReferences = (
@@ -530,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E2E8F82B2E762C009F2A48 /* LICENSE in Resources */,
+				C086614E2B35CBDF006F8365 /* Localizable.strings in Resources */,
 				C04AD0492B2E0A9E0069089B /* README.md in Resources */,
 				C04AD04B2B2E0A9E0069089B /* Assets.xcassets in Resources */,
 			);
@@ -539,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C086614D2B35CBDF006F8365 /* Localizable.strings in Resources */,
 				C040B4432B18D29C0022EF75 /* README.md in Resources */,
 				C010767F2B2E020F00B34BD5 /* GoogleService-Info.plist in Resources */,
 				C0E2E8F72B2E762C009F2A48 /* LICENSE in Resources */,
@@ -577,6 +597,7 @@
 				C04AD0362B2E0A9E0069089B /* TabView.swift in Sources */,
 				C0E2E8F52B2E7389009F2A48 /* ServerNetworkConstants.swift in Sources */,
 				C04AD0372B2E0A9E0069089B /* SettingsViewController.swift in Sources */,
+				C08661542B35CC10006F8365 /* Extension+String.swift in Sources */,
 				C04AD0382B2E0A9E0069089B /* LoginViewController.swift in Sources */,
 				C04AD0392B2E0A9E0069089B /* SelectButton.swift in Sources */,
 				C04AD03A2B2E0A9E0069089B /* RouteCardView.swift in Sources */,
@@ -628,6 +649,7 @@
 				C01FBECA2B1E81AF00843189 /* TabBarViewController.swift in Sources */,
 				C08661442B35BC66006F8365 /* AppearanceSaving.swift in Sources */,
 				C0B7C6952B2114DB003ED203 /* FirebaseNetworkDataService.swift in Sources */,
+				C08661532B35CC10006F8365 /* Extension+String.swift in Sources */,
 				C07AF1402B2684B50006B25F /* SignOutButtonCell.swift in Sources */,
 				C040B4472B18D54A0022EF75 /* FirebaseLoginService.swift in Sources */,
 				C09B18E12B22670E00CB2983 /* ScheduleModel.swift in Sources */,
@@ -637,6 +659,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C08661502B35CBDF006F8365 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C086614F2B35CBDF006F8365 /* en */,
+				C08661512B35CBE1006F8365 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C04AD04D2B2E0A9E0069089B /* Debug */ = {

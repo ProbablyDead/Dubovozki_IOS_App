@@ -1,0 +1,64 @@
+/* 
+  Localizable.strings
+  DubovozkiApp
+
+  Created by Илья Володин on 22.12.2023.
+  
+*/
+
+"Routes" = "Пути";
+
+"Slavyansky Blvd" = "Славянский блв";
+"Molodezhnaya" = "Молодежная";
+"Odintsovo" = "Одинцово";
+
+"To Slavyansky Blvd" = "На Славянский блв";
+"To Molodezhnaya" = "На Молодежную";
+"To Odintsovo" = "В Одинцово";
+"To Dubki" = "В Дубки";
+"To Moscow" = "В Москву";
+
+"to Dubki" = "в Дубки";
+"to Moscow" = "в Москву";
+
+"All stations" = "Все станции";
+
+"Leaving now" = "Уходит сейчас";
+
+"ago" = "назад";
+"in" = "через";
+
+"min" = "мин";
+"h" = "ч";
+
+"Open in maps" = "Открыть в картах";
+
+"Stations" = "Станции";
+"Settings" = "Настройки";
+"Schedule" = "Расписание";
+
+"Today" = "Cегодня";
+"Tomorrow" = "Завтра";
+"Monday" = "Понедельник";
+"Weekdays" = "Будни";
+"Saturday" = "Cуббота";
+"Sunday" = "Воскресенье";
+
+"Sign out" = "Выход";
+"Email" = "Почта";
+"Password" = "Пароль";
+
+"Invalid email" = "Несуществующая почта";
+"No such user" = "Пользователь не найден";
+"Create an account?" = "Создать аккаунт?";
+"Cancel" = "Отмена";
+"Continue" = "Продолжить";
+"Wrong password" = "Неправильный пароль";
+"Email exists" = "Почта существует";
+"Reset password" = "Восстановить пароль";
+"Send email with a password reset link?" = "Отправить ссылку с восстановлением пароля?";
+
+"Dark mode" = "Темная тема";
+
+"Forgot password?" = "Забыли пароль?";
+"Login/Register" = "Вход/Регистрация";

@@ -11,7 +11,7 @@ final class AppearanceCell: UITableViewCell {
     static let reuseID: String = "AppearanceCell"
     
     private enum Constants {
-        static let titleForCell: String = "Dark mode"
+        static let titleForCell: String = "Dark mode".localized()
         static let switchRightOffset: CGFloat = -13
     }
     

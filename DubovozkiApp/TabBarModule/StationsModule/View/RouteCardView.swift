@@ -66,7 +66,7 @@ class RouteCardView: UIView {
     init(title: String, travelTime: Int?, backGroundImageName: String) {
         self.titleLabel.text = title
         if let travelTime = travelTime {
-            self.travelTimeLabel.text = "\(travelTime) min"
+            self.travelTimeLabel.text = "\(travelTime) " + "min".localized()
         }
         super.init(frame: .zero)
         
