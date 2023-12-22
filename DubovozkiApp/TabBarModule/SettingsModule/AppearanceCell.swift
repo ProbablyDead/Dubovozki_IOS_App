@@ -41,7 +41,10 @@ final class AppearanceCell: UITableViewCell {
         }
     }
     
-    public func configure(_ action: @escaping (Bool) -> Void) {
+    public func configure(_ action: @escaping (Bool) -> Void, isDark: Bool? = nil) {
+        if let isDark = isDark {
+            switchView.setOn(isDark, animated: false)
+        }
         switchAction = action
     }
     

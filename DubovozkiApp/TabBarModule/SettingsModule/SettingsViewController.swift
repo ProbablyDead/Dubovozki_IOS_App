@@ -85,9 +85,9 @@ extension SettingsViewController: UITableViewDataSource {
         case 0:
             let cell = settingsTable.dequeueReusableCell(withIdentifier: AppearanceCell.reuseID, for: indexPath)
             guard let appearanceCell = cell as? AppearanceCell else { return cell }
-            appearanceCell.configure {[weak self] isOn in
+            appearanceCell.configure ({[weak self] isOn in
                 self?.appearanceSettings.changeTheme(isDark: isOn)
-            }
+            }, isDark: appearanceSettings.getCurrentTheme())
             return appearanceCell
             
         case 1:

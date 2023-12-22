@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         AppearanceSaving.window = window
+        AppearanceSaving.shared.applyDefaults()
         
         #if Firebase
         let loginService = FirebaseLoginService()
