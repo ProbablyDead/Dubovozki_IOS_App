@@ -16,6 +16,8 @@ class SettingsViewController: UIViewController {
         static let numberOfSections: Int = 2
     }
     
+    private let appearanceSettings = AppearanceSaving()
+    
     var loginService: LoginServiceProtocol?
     var router: RouterProtocol?
     
@@ -83,8 +85,8 @@ extension SettingsViewController: UITableViewDataSource {
         case 0:
             let cell = settingsTable.dequeueReusableCell(withIdentifier: AppearanceCell.reuseID, for: indexPath)
             guard let appearanceCell = cell as? AppearanceCell else { return cell }
-            appearanceCell.configure { isOn in
-                print(isOn)
+            appearanceCell.configure {[weak self] isOn in
+                self?.appearanceSettings.changeTheme(isDark: isOn)
             }
             return appearanceCell
             
@@ -92,9 +94,9 @@ extension SettingsViewController: UITableViewDataSource {
             let cell = settingsTable.dequeueReusableCell(withIdentifier: SignOutButtonCell.reuseID, for: indexPath)
             guard let signOutCell = cell as? SignOutButtonCell else { return cell }
             
-            signOutCell.configure {
-                self.loginService?.signOut()
-                self.router?.loginViewController()
+            signOutCell.configure {[weak self] in
+                self?.loginService?.signOut()
+                self?.router?.loginViewController()
             }
             return signOutCell
             

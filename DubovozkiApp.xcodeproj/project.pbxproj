@@ -69,6 +69,8 @@
 		C086613B2B3591EC006F8365 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
 		C08661402B35B48A006F8365 /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
 		C08661412B35B48A006F8365 /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
+		C08661442B35BC66006F8365 /* AppearanceSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661432B35BC66006F8365 /* AppearanceSaving.swift */; };
+		C08661452B35BC66006F8365 /* AppearanceSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661432B35BC66006F8365 /* AppearanceSaving.swift */; };
 		C09B18B82B21D47D00CB2983 /* Bus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */; };
 		C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
@@ -119,6 +121,7 @@
 		C07F46852B215204002E0B93 /* ScheduleCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleCDModel.xcdatamodel; sourceTree = "<group>"; };
 		C08661392B3591EC006F8365 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		C086613F2B35B48A006F8365 /* AppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCell.swift; sourceTree = "<group>"; };
+		C08661432B35BC66006F8365 /* AppearanceSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSaving.swift; sourceTree = "<group>"; };
 		C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -301,6 +304,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		C08661422B35BC52006F8365 /* Appearence */ = {
+			isa = PBXGroup;
+			children = (
+				C08661432B35BC66006F8365 /* AppearanceSaving.swift */,
+			);
+			path = Appearence;
+			sourceTree = "<group>";
+		};
 		C0AE5B212B18B3F8002DC427 = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +395,7 @@
 		C0B7C6932B210631003ED203 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C08661422B35BC52006F8365 /* Appearence */,
 				C0E2E8F92B2EA02B009F2A48 /* KeyChainService */,
 				C07F468F2B2153A7002E0B93 /* CoreData */,
 				C0AE5B452B18B4C2002DC427 /* Network */,
@@ -574,6 +586,7 @@
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
 				C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */,
 				C086613B2B3591EC006F8365 /* AdditionalViewController.swift in Sources */,
+				C08661452B35BC66006F8365 /* AppearanceSaving.swift in Sources */,
 				C04AD0402B2E0A9E0069089B /* ScheduleModel.swift in Sources */,
 				C0E2E8FB2B2EA03E009F2A48 /* KeyChainService.swift in Sources */,
 				C04AD0412B2E0A9E0069089B /* PagedView.swift in Sources */,
@@ -613,6 +626,7 @@
 				C0A45B1C2B28974400F8BCF5 /* RouteCardView.swift in Sources */,
 				C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */,
 				C01FBECA2B1E81AF00843189 /* TabBarViewController.swift in Sources */,
+				C08661442B35BC66006F8365 /* AppearanceSaving.swift in Sources */,
 				C0B7C6952B2114DB003ED203 /* FirebaseNetworkDataService.swift in Sources */,
 				C07AF1402B2684B50006B25F /* SignOutButtonCell.swift in Sources */,
 				C040B4472B18D54A0022EF75 /* FirebaseLoginService.swift in Sources */,
