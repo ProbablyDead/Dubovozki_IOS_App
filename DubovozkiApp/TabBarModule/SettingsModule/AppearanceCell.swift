@@ -10,6 +10,17 @@ import UIKit
 final class AppearanceCell: UITableViewCell {
     static let reuseID: String = "AppearanceCell"
     
+    private enum Constants {
+        static let titleForCell: String = "Dark mode"
+        static let switchRightOffset: CGFloat = -13
+    }
+    
+    private lazy var switchView: UISwitch = {
+        let controller = UISwitch()
+        controller.translatesAutoresizingMaskIntoConstraints = false
+        controller.addTarget(self, action: #selector(switched), for: .valueChanged)
+        return controller
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,7 +32,27 @@ final class AppearanceCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private var switchAction: ((Bool) -> Void)?
+    
+    @objc
+    private func switched(_ sender: UISwitch) {
+        if let switchAction = switchAction {
+            switchAction(sender.isOn)
+        }
+    }
+    
+    public func configure(_ action: @escaping (Bool) -> Void) {
+        switchAction = action
+    }
+    
     private func configureUI() {
-        backgroundColor = .red
+        textLabel?.text = Constants.titleForCell
+        contentView.isUserInteractionEnabled = false
+        selectionStyle = .none
+        
+        addSubview(switchView)
+        
+        switchView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        switchView.rightAnchor.constraint(equalTo: rightAnchor, constant: Constants.switchRightOffset).isActive = true
     }
 }

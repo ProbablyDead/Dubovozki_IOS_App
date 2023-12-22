@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     
     private let settingsTable: UITableView = {
         let controller = UITableView()
-        controller.backgroundColor = .secondarySystemFill
+        controller.backgroundColor = .secondarySystemBackground
         controller.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -34,7 +34,6 @@ class SettingsViewController: UIViewController {
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
-        
         view.addSubview(settingsTable)
         settingsTable.delegate = self
         settingsTable.dataSource = self
@@ -58,6 +57,16 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .none
     }
+    
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .secondarySystemBackground
+        return view
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
 }
 
 extension SettingsViewController: UITableViewDataSource {
@@ -74,6 +83,9 @@ extension SettingsViewController: UITableViewDataSource {
         case 0:
             let cell = settingsTable.dequeueReusableCell(withIdentifier: AppearanceCell.reuseID, for: indexPath)
             guard let appearanceCell = cell as? AppearanceCell else { return cell }
+            appearanceCell.configure { isOn in
+                print(isOn)
+            }
             return appearanceCell
             
         case 1:
