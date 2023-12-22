@@ -55,18 +55,29 @@ fileprivate enum StationTypes {
         }
     }
     
-    var image: UIImage {
-        UIImage()
+    var imageName: String {
+        "ImageWillBeSoon"
     }
     
     var link: String {
-        ""
+        switch self {
+        case .dubkiStation:
+            "https://yandex.ru/maps/-/CDqwmCi5"
+        case .dubkiToMldStation:
+            "https://yandex.ru/maps/-/CDqwmK72"
+        case .odintsovoStation:
+            "https://yandex.ru/maps/-/CDqwmTN-"
+        case .slavyanskyStation:
+            "https://maps.yandex.com/?pt=37.475175,55.728993&z=17"
+        case .molodezhkaStation:
+            "https://yandex.ru/maps/-/CDqwqAiB"
+        }
     }
 }
 
 struct Station {
     let name: String
-    let image: UIImage
+    let imageName: String
     let linkToMaps: String
 }
 
@@ -88,30 +99,30 @@ extension Route {
               imageName: RouteTypes.slavyanskyRoute.imageName,
               travelTime: RouteTypes.slavyanskyRoute.travelTime,
               stationTo: Station(name: to + StationTypes.slavyanskyStation.name,
-                                 image: StationTypes.dubkiStation.image,
+                                 imageName: StationTypes.dubkiStation.imageName,
                                  linkToMaps: StationTypes.dubkiStation.link),
               stationFrom: Station(name: to + StationTypes.odintsovoStation.name,
-                                 image: StationTypes.slavyanskyStation.image,
+                                   imageName: StationTypes.slavyanskyStation.imageName,
                                  linkToMaps: StationTypes.slavyanskyStation.link)),
         
         Route(name: StationTypes.molodezhkaStation.name,
               imageName: RouteTypes.molodezhnayaRoute.imageName,
               travelTime: RouteTypes.molodezhnayaRoute.travelTime,
               stationTo: Station(name: to + StationTypes.molodezhkaStation.name,
-                                 image: StationTypes.dubkiToMldStation.image,
+                                 imageName: StationTypes.dubkiToMldStation.imageName,
                                  linkToMaps: StationTypes.dubkiToMldStation.link),
               stationFrom: Station(name: to + StationTypes.dubkiStation.name,
-                                 image: StationTypes.molodezhkaStation.image,
+                                   imageName: StationTypes.molodezhkaStation.imageName,
                                  linkToMaps: StationTypes.molodezhkaStation.link)),
         
         Route(name: StationTypes.odintsovoStation.name,
               imageName: RouteTypes.odintsovoRoute.imageName,
               travelTime: RouteTypes.odintsovoRoute.travelTime,
               stationTo: Station(name: to + StationTypes.odintsovoStation.name,
-                                 image: StationTypes.dubkiStation.image,
+                                 imageName: StationTypes.dubkiStation.imageName,
                                  linkToMaps: StationTypes.dubkiStation.link),
               stationFrom: Station(name: to + StationTypes.dubkiStation.name,
-                                 image: StationTypes.odintsovoStation.image,
+                                   imageName: StationTypes.odintsovoStation.imageName,
                                  linkToMaps: StationTypes.odintsovoStation.link)),
     ]
 }

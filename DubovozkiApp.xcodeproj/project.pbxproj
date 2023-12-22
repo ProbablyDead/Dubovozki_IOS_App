@@ -65,6 +65,8 @@
 		C0740A762B1D259D000B15C8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0740A752B1D259D000B15C8 /* GoogleSignInSwift */; };
 		C07AF1402B2684B50006B25F /* SignOutButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */; };
 		C07F46862B215204002E0B93 /* ScheduleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07F46842B215204002E0B93 /* ScheduleModel.xcdatamodeld */; };
+		C086613A2B3591EC006F8365 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
+		C086613B2B3591EC006F8365 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
 		C09B18B82B21D47D00CB2983 /* Bus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */; };
 		C09B18B92B21D47D00CB2983 /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
 		C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
@@ -113,6 +115,7 @@
 		C056A2A92B2409440088D5A3 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButtonCell.swift; sourceTree = "<group>"; };
 		C07F46852B215204002E0B93 /* ScheduleCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleCDModel.xcdatamodel; sourceTree = "<group>"; };
+		C08661392B3591EC006F8365 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bus+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -410,15 +413,6 @@
 			path = KeyChainService;
 			sourceTree = "<group>";
 		};
-		C0E49B4D2B34A4B9006A3DE1 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C01FBECF2B1E87FB00843189 /* StationsViewController.swift */,
-				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
 		C0E49B4F2B34C012006A3DE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,7 +424,9 @@
 		C0E49B502B34C018006A3DE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C0E49B4D2B34A4B9006A3DE1 /* MainScreen */,
+				C01FBECF2B1E87FB00843189 /* StationsViewController.swift */,
+				C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */,
+				C08661392B3591EC006F8365 /* AdditionalViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,6 +576,7 @@
 				C0E2E8F12B2E65E9009F2A48 /* ServerLoginService.swift in Sources */,
 				C04AD03C2B2E0A9E0069089B /* TabBarViewController.swift in Sources */,
 				C04AD03E2B2E0A9E0069089B /* SignOutButtonCell.swift in Sources */,
+				C086613B2B3591EC006F8365 /* AdditionalViewController.swift in Sources */,
 				C04AD0402B2E0A9E0069089B /* ScheduleModel.swift in Sources */,
 				C0E2E8FB2B2EA03E009F2A48 /* KeyChainService.swift in Sources */,
 				C04AD0412B2E0A9E0069089B /* PagedView.swift in Sources */,
@@ -603,6 +600,7 @@
 				C0A9ACA02B348D4D0041E676 /* Model.swift in Sources */,
 				C040B49C2B1B90D90022EF75 /* ModuleBuilder.swift in Sources */,
 				C0AE5B302B18B3F8002DC427 /* SceneDelegate.swift in Sources */,
+				C086613A2B3591EC006F8365 /* AdditionalViewController.swift in Sources */,
 				C01FBED02B1E87FB00843189 /* StationsViewController.swift in Sources */,
 				C09B18BA2B21D47D00CB2983 /* Schedule+CoreDataClass.swift in Sources */,
 				C056A2A02B23F02B0088D5A3 /* PageCollectionViewCell.swift in Sources */,

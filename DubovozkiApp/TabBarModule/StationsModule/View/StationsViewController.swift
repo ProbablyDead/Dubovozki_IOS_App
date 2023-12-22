@@ -17,9 +17,20 @@ class StationsViewController: UIViewController {
     
     private let routes: [Route] = Route.routes
     
-    private lazy var arrangedCardViews: [UIView] = routes.map { RouteCardView(title: $0.name,
-                                                                              travelTime: $0.travelTime,
-                                                                              backGroundImageName: $0.imageName) }
+    private lazy var arrangedCardViews: [RouteCardView] = routes.enumerated().map { (index, element) in
+        let card = RouteCardView(title: element.name,
+                                 travelTime: element.travelTime,
+                                 backGroundImageName: element.imageName)
+        
+        card.tag = index
+        card.tapHandler = showAdditional
+        
+        return card
+    }
+    
+    private func showAdditional(for index: Int) {
+        guard navigationController?.present(AdditionalViewController(routeCard: routes[index]), animated: true) != nil else { return }
+    }
     
     private lazy var stackView: UIStackView = {
         let controller = UIStackView()
@@ -27,6 +38,7 @@ class StationsViewController: UIViewController {
         controller.distribution = .fillEqually
         controller.alignment = .fill
         controller.axis = .vertical
+        controller.isUserInteractionEnabled = true
         controller.spacing = Constants.spacing
         
         arrangedCardViews.forEach { controller.addArrangedSubview($0) }
@@ -35,6 +47,7 @@ class StationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.isUserInteractionEnabled = true
         
         configureUI()
     }
