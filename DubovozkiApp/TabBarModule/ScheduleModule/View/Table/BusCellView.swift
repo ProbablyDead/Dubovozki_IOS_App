@@ -138,13 +138,12 @@ class BusCell: UITableViewCell {
         addSubview(leftTimeLabel)
         addSubview(stationLabel)
         
-        leftTimeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.leftTimeWidth + Constants.leftTimeOffset).isActive = true
+        leftTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: Constants.leftTimeWidth + Constants.leftTimeOffset).isActive = true
         leftTimeLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         leftTimeLabel.rightAnchor.constraint(equalTo: stationLabel.leftAnchor, constant: -Constants.leftTimeOffset).isActive = true
         leftTimeLabel.heightAnchor.constraint(equalToConstant: frame.height/Constants.leftTimeHeigthDevider).isActive = true
         
-        stationLabel.leadingAnchor.constraint(equalTo: centerXAnchor, constant: Constants.stationOffsetFromCenter).isActive = true
-        stationLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        stationLabel.leftAnchor.constraint(equalTo: centerXAnchor, constant: Constants.stationOffsetFromCenter).isActive = true
         stationLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         stationLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
