@@ -57,6 +57,7 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
             currentSelectionOfDate = dataEnum
         }
         
+        setClosest()
         refreshTables()
     }
     
@@ -104,6 +105,24 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         return processedBuses
     }
     
+    private func setClosest() {
+        let calendar = Calendar.current
+        let now = Date()
+        
+        let midnight = calendar.startOfDay(for: now)
+        let milliseconds = Int64(now.timeIntervalSince(midnight) * 1000)
+        
+        closestMskBus.item = mskBuses?.firstIndex {
+            let dif = ($0.dayTime - milliseconds)
+            return dif > 0
+        } ?? 0
+        
+        closestDubkiBus.item = dubkiBuses?.firstIndex {
+            let dif = ($0.dayTime - milliseconds)
+            return dif > 0
+        } ?? 0
+    }
+    
     private var buses: [Bus]? {
         didSet {
             buses = processBusSchedule(buses: buses!)
@@ -112,22 +131,8 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
             mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
             dubkiBuses = buses?.filter { $0.direction == Filters.direction.dbk.rawValue }
             dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.todayVar }
-            
-            let calendar = Calendar.current
-            let now = Date()
-            
-            let midnight = calendar.startOfDay(for: now)
-            let milliseconds = Int64(now.timeIntervalSince(midnight) * 1000)
-            
-            closestMskBus.item = mskBuses?.firstIndex {
-                let dif = ($0.dayTime - milliseconds)
-                return dif > 0
-            } ?? 0
-            
-            closestDubkiBus.item = dubkiBuses?.firstIndex {
-                let dif = ($0.dayTime - milliseconds)
-                return dif > 0
-            } ?? 0
+           
+            setClosest()
         }
     }
     
