@@ -129,8 +129,12 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         DispatchQueue.main.async { [weak self] in
             self?.view?.setSchedule()
             self?.refreshTables()
-            self?.view?.mskTableView.scrollToRow(at: self?.closestMskBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
-            self?.view?.dubkiTableView.scrollToRow(at: self?.closestDubkiBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
+            if self?.mskBuses?.count != 0 {
+                self?.view?.mskTableView.scrollToRow(at: self?.closestMskBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
+            }
+            if self?.dubkiBuses?.count != 0 {
+                self?.view?.dubkiTableView.scrollToRow(at: self?.closestDubkiBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
+            }
         }
     }
     
