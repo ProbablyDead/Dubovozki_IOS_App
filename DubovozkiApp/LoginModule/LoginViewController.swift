@@ -58,7 +58,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let controller = UITextField()
         controller.translatesAutoresizingMaskIntoConstraints = false
         controller.backgroundColor = .white
-        controller.placeholder = Constants.emailPlaceholder
+        controller.attributedPlaceholder = NSAttributedString(
+            string: Constants.emailPlaceholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
+            )
         controller.isUserInteractionEnabled = true
         controller.autocapitalizationType = .none
         controller.autocorrectionType = .no
@@ -77,7 +80,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private lazy var passwordTextField: UITextField = {
         let controller = UITextField()
         controller.translatesAutoresizingMaskIntoConstraints = false
-        controller.placeholder = Constants.passwordPlaceholder
+        controller.attributedPlaceholder = NSAttributedString(
+            string: Constants.passwordPlaceholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
+            )
         controller.backgroundColor = .white
         controller.isSecureTextEntry = true
         controller.autocapitalizationType = .none
