@@ -13,6 +13,7 @@ protocol PagedViewDelegate: AnyObject {
 
 class PagedView: UIView {
     public weak var delegate: PagedViewDelegate?
+    public var currentViewIndex: Int = 0
     
     public var pages: [UIView] {
         didSet {
@@ -57,6 +58,7 @@ class PagedView: UIView {
     }
     
     public func moveToPage(at index: Int) {
+        currentViewIndex = index
         collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
@@ -75,6 +77,7 @@ extension PagedView: UICollectionViewDelegateFlowLayout {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page = Int(self.collectionView.contentOffset.x / self.collectionView.frame.size.width)
+        currentViewIndex = page
         self.delegate?.didMoveToPage(index: page)
     }
 }

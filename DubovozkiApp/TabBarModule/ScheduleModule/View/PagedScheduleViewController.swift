@@ -10,11 +10,32 @@ import UIKit
 class PagedScheduleViewController: UIViewController {
     private enum Constants {
         static let buttonsOffset: CGFloat = 5
+        
+        static let scrollButtonImage: UIImage = UIImage(systemName: "bolt") ?? UIImage()
+        static let scrollButtonSide: CGFloat = 50
     }
     
     var presenter: ScheduleViewPresenterProtocol!
     
     private let loadingView: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    private lazy var scrollButton: UIButton = {
+        let controller = UIButton()
+        controller.translatesAutoresizingMaskIntoConstraints = false
+        controller.backgroundColor = .red
+        controller.setImage(Constants.scrollButtonImage, for: .normal)
+        controller.layer.cornerRadius = 0.5 * Constants.scrollButtonSide
+        controller.addTarget(self, action: #selector(scrollTable), for: .touchUpInside)
+        controller.clipsToBounds = true
+        return controller
+    }()
+    
+    @objc
+    private func scrollTable(_ sender: UIButton) {
+        if let table = viewPager.pagedView.pages[viewPager.pagedView.currentViewIndex] as? UITableView {
+            presenter.scrollToClosest(forTable: table)
+        }
+    }
     
     let mskTableView: ScheduleTableView = ScheduleTableView()
     let dubkiTableView: ScheduleTableView = ScheduleTableView()
@@ -27,6 +48,7 @@ class PagedScheduleViewController: UIViewController {
             }
         }
     }()
+    
     private lazy var dateSelector: SelectButton = {
         let options: [(String, String)] = Filters.date.allCases.map { ($0.title.localized(), String($0.rawValue)) }
         return SelectButton(opitions: options) {[weak self] str in
@@ -68,6 +90,7 @@ class PagedScheduleViewController: UIViewController {
         
         configureLoading()
         configureTabs()
+        configureScrollButton()
     }
     
     private func configureTabs() {
@@ -87,6 +110,15 @@ class PagedScheduleViewController: UIViewController {
         viewPager.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         viewPager.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         viewPager.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    private func configureScrollButton() {
+        view.addSubview(scrollButton)
+        
+        scrollButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -Constants.buttonsOffset).isActive = true
+        scrollButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.buttonsOffset).isActive = true
+        scrollButton.widthAnchor.constraint(equalToConstant: Constants.scrollButtonSide).isActive = true
+        scrollButton.heightAnchor.constraint(equalToConstant: Constants.scrollButtonSide).isActive = true
     }
     
     private func configureLoading() {

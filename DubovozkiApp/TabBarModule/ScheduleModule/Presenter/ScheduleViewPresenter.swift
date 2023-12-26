@@ -17,6 +17,7 @@ protocol ScheduleViewPresenterProtocol: AnyObject {
     init(view: ScheduleViewProtocol, model: ModelProtocol)
     func getData()
     func filterData(station: String, date: String)
+    func scrollToClosest(forTable: UITableView)
 }
 
 class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
@@ -57,6 +58,20 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         }
         
         refreshTables()
+    }
+    
+    func scrollToClosest(forTable: UITableView) {
+        if forTable == view?.mskTableView {
+            if self.mskBuses?.count != 0 {
+                forTable.scrollToRow(at: self.closestMskBus, at: .middle, animated: true)
+            }
+        }
+        
+        if forTable == view?.dubkiTableView {
+            if self.dubkiBuses?.count != 0 {
+                forTable.scrollToRow(at: self.closestDubkiBus, at: .middle, animated: true)
+            }
+        }
     }
     
     private func processBusSchedule(buses: [Bus]) -> [Bus] {
@@ -129,11 +144,10 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         DispatchQueue.main.async { [weak self] in
             self?.view?.setSchedule()
             self?.refreshTables()
-            if self?.mskBuses?.count != 0 {
-                self?.view?.mskTableView.scrollToRow(at: self?.closestMskBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
-            }
-            if self?.dubkiBuses?.count != 0 {
-                self?.view?.dubkiTableView.scrollToRow(at: self?.closestDubkiBus ?? IndexPath(item: 0, section: 0), at: .middle, animated: false)
+            
+            if let mskTableView = self?.view?.mskTableView, let dubkiTableView = self?.view?.dubkiTableView {
+                self?.scrollToClosest(forTable: mskTableView)
+                self?.scrollToClosest(forTable: dubkiTableView)
             }
         }
     }
