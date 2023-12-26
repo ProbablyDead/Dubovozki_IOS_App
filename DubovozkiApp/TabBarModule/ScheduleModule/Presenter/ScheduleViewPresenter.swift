@@ -17,7 +17,7 @@ protocol ScheduleViewPresenterProtocol: AnyObject {
     init(view: ScheduleViewProtocol, model: ModelProtocol)
     func getData()
     func filterData(station: String, date: String)
-    func scrollToClosest(forTable: UITableView, animated: Bool)
+    func scrollToClosest(table: UITableView, animated: Bool)
 }
 
 class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
@@ -61,17 +61,35 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         refreshTables()
     }
     
-    func scrollToClosest(forTable: UITableView, animated: Bool) {
-        if forTable == view?.mskTableView {
+    func scrollToClosest(table: UITableView, animated: Bool) {
+        var cell: UITableViewCell? = nil
+        
+        if table == view?.mskTableView {
             if self.mskBuses?.count != 0 {
-                forTable.scrollToRow(at: self.closestMskBus, at: .middle, animated: animated)
-            }
+                table.scrollToRow(at: self.closestMskBus, at: .top, animated: animated)
+                cell = table.cellForRow(at: self.closestMskBus)
+            } else { return }
         }
         
-        if forTable == view?.dubkiTableView {
+        if table == view?.dubkiTableView {
             if self.dubkiBuses?.count != 0 {
-                forTable.scrollToRow(at: self.closestDubkiBus, at: .middle, animated: animated)
-            }
+                table.scrollToRow(at: self.closestDubkiBus, at: .top, animated: animated)
+                cell = table.cellForRow(at: self.closestDubkiBus)
+            } else { return }
+        }
+        
+        if let cell = cell, animated {
+            animateCell(cell: cell)
+        }
+    }
+    
+    private func animateCell(cell: UITableViewCell) {
+        UIView.animate(withDuration: 0.5, animations: {
+            cell.contentView.backgroundColor = UIColor.lightGray
+        }) { (completed) in
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.contentView.backgroundColor = UIColor.clear
+            })
         }
     }
     
@@ -151,8 +169,8 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
             self?.refreshTables()
             
             if let mskTableView = self?.view?.mskTableView, let dubkiTableView = self?.view?.dubkiTableView {
-                self?.scrollToClosest(forTable: mskTableView, animated: false)
-                self?.scrollToClosest(forTable: dubkiTableView, animated: false)
+                self?.scrollToClosest(table: mskTableView, animated: false)
+                self?.scrollToClosest(table: dubkiTableView, animated: false)
             }
         }
     }
