@@ -52,6 +52,12 @@ class PagedScheduleViewController: UIViewController {
     private lazy var dateSelector: SelectButton = {
         let options: [(String, String)] = Filters.date.allCases.map { ($0.title.localized(), String($0.rawValue)) }
         return SelectButton(opitions: options) {[weak self] str in
+            if Filters.date.RawValue(str) == Filters.date.today.rawValue {
+                self?.scrollButton.isHidden = false
+            } else {
+                self?.scrollButton.isHidden = true
+            }
+            
             if let station: String = self?.stationSelector.currentSelection {
                 self?.presenter.filterData(station: station, date: str)
             }
