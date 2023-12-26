@@ -15,6 +15,7 @@ protocol RouterMainProtocol {
 protocol RouterProtocol: RouterMainProtocol {
     func loginViewController()
     func tabBarViewController()
+    func additionalViewController(route: Route)
     func popToRoot()
 }
 
@@ -38,6 +39,13 @@ class Router: RouterProtocol {
         if let navigationController = navigationController {
             guard let loginViewController = assemblyBuilder?.createLoginModule(router: self) else { return }
             navigationController.pushViewController(loginViewController, animated: true)
+        }
+    }
+    
+    func additionalViewController(route: Route) {
+        if let navigationController = navigationController {
+            guard let additionalViewController = assemblyBuilder?.createAdditionalViewController(route: route) else { return }
+            navigationController.present(additionalViewController, animated: true)
         }
     }
     

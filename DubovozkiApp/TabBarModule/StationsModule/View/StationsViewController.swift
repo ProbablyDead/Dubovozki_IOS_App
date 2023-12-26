@@ -15,6 +15,8 @@ class StationsViewController: UIViewController {
         static let navItemTitle: String = "Routes".localized()
     }
     
+    public var router: RouterProtocol?
+    
     private let routes: [Route] = Route.routes
     
     private lazy var arrangedCardViews: [RouteCardView] = routes.enumerated().map { (index, element) in
@@ -29,7 +31,7 @@ class StationsViewController: UIViewController {
     }
     
     private func showAdditional(for index: Int) {
-        guard navigationController?.present(AdditionalViewController(routeCard: routes[index]), animated: true) != nil else { return }
+        router?.additionalViewController(route: routes[index])
     }
     
     private lazy var stackView: UIStackView = {

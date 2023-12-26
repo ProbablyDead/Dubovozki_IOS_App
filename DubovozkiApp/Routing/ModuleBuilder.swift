@@ -11,7 +11,8 @@ protocol AssemblyBuilderProtocol {
     func createLoginModule(router: RouterProtocol) -> UIViewController
     func createTabBarModule(router: RouterProtocol) -> UIViewController
     func createScheduleModule() -> UIViewController
-    func createMapModule() -> UIViewController
+    func createStationsModule(router: RouterProtocol) -> UIViewController
+    func createAdditionalViewController(route: Route) -> UIViewController
     func createSettingsModule(loginService: LoginServiceProtocol, router: RouterProtocol) -> UIViewController
 }
 
@@ -32,13 +33,19 @@ class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     }
     
     func createTabBarModule(router: RouterProtocol) -> UIViewController {
-        TabBarViewController(mapViewController: createMapModule(), scheduleViewController: createScheduleModule(), settingsViewController: createSettingsModule(loginService: self.loginService, router: router), router: router)
+        TabBarViewController(mapViewController: createStationsModule(router: router), scheduleViewController: createScheduleModule(), settingsViewController: createSettingsModule(loginService: self.loginService, router: router), router: router)
     }
     
-    internal func createMapModule() -> UIViewController {
-        StationsViewController()
+    internal func createStationsModule(router: RouterProtocol) -> UIViewController {
+        let stationsViewController = StationsViewController()
+        stationsViewController.router = router
+        return stationsViewController
     }
     
+    func createAdditionalViewController(route: Route) -> UIViewController {
+        AdditionalViewController(routeCard: route)
+    }
+     
     internal func createScheduleModule() -> UIViewController {
         let view = PagedScheduleViewController()
         let model = ScheduleModel(networkDataService: self.networkDataService)
