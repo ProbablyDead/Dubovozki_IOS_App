@@ -33,7 +33,7 @@ class PagedScheduleViewController: UIViewController {
     @objc
     private func scrollTable(_ sender: UIButton) {
         if let table = viewPager.pagedView.pages[viewPager.pagedView.currentViewIndex] as? UITableView {
-            presenter.scrollToClosest(forTable: table)
+            presenter.scrollToClosest(forTable: table, animated: true)
         }
     }
     
