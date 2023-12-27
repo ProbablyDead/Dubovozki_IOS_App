@@ -7,12 +7,14 @@
 
 import Foundation
 
+// MARK: - Server network constants extension for data
 private extension ServerNetworkConstants {
     private static let data: String = "data/"
     
     static let getData: String = hostname + data + "getData"
 }
 
+// MARK: - Server network service
 class ServerNetworkDataService: NetworkDataServiceProtocol {
     func getData(completion: @escaping ((Data) -> Void)) {
         if let url = URL(string: ServerNetworkConstants.getData) {

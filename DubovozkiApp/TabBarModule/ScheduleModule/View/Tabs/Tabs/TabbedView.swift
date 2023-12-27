@@ -7,10 +7,12 @@
 
 import UIKit
 
+// MARK: - Tabbed view delegate protocol
 protocol TabbedViewDelegate: AnyObject {
     func didMoveToTab(at index: Int)
 }
 
+// MARK: - Tabbed view
 class TabbedView: UIView {
     public weak var delegate: TabbedViewDelegate?
     private var currentSelectedIndex: Int = 0

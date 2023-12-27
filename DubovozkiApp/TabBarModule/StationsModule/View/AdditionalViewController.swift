@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Additional module view
 class AdditionalViewController: UIViewController {
     private enum Constants {
         static let spacing: CGFloat = 5

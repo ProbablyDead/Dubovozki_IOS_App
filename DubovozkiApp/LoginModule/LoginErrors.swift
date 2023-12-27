@@ -5,6 +5,7 @@
 //  Created by Илья Володин on 12.12.2023.
 //
 
+// MARK: - Login errors
 enum LoginNetworkError: String, Error {
     case userNotFound = "EMAIL_NOT_FOUND"
     case emailExists = "EMAIL_EXISTS"

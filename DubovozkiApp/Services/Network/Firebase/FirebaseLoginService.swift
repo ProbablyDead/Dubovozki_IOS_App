@@ -9,6 +9,7 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 
+// MARK: - Login service class
 class FirebaseLoginService: LoginServiceProtocol {
     
     static func chooseError(error: Error) -> LoginNetworkError {

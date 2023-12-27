@@ -7,12 +7,14 @@
 import Foundation
 import UIKit
 
+// MARK: - Schedule view protocol
 protocol ScheduleViewProtocol: AnyObject {
     func setSchedule()
     var mskTableView: ScheduleTableView { get }
     var dubkiTableView: ScheduleTableView { get }
 }
 
+// MARK: - Schedule view presenter protocol
 protocol ScheduleViewPresenterProtocol: AnyObject {
     init(view: ScheduleViewProtocol, model: ModelProtocol)
     func getData()
@@ -20,6 +22,7 @@ protocol ScheduleViewPresenterProtocol: AnyObject {
     func scrollToClosest(table: UITableView, animated: Bool)
 }
 
+// MARK: - Schedule view presenter 
 class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     private enum Constants {
         static let millisecondsInDay: Int64 = 86400000

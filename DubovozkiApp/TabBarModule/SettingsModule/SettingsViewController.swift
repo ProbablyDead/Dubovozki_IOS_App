@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Settings view
 class SettingsViewController: UIViewController {
     private enum Constants {
         static let navItemTitle: String = "Settings".localized()
@@ -54,6 +55,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
+// MARK: - Table delegate for settings
 extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .none
@@ -70,6 +72,7 @@ extension SettingsViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - Table data source for settings
 extension SettingsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         Constants.numberOfSections

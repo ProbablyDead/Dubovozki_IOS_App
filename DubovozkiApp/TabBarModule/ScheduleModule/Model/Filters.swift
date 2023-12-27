@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Filters
 enum Filters {
     static let closeBusTime: Int64 = 1800000
     

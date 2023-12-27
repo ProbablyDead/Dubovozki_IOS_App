@@ -8,6 +8,7 @@
 import GoogleSignIn
 import UIKit
 
+// MARK: - Keychainservice protocol
 protocol KeyChainServiceProtocol {
     func save(idToken: String)
     func check() -> Bool
@@ -16,6 +17,7 @@ protocol KeyChainServiceProtocol {
 
 typealias Body = [String: String]
 
+// MARK: - Server network constants extension for login
 private extension ServerNetworkConstants {
     private static let auth: String = "auth/"
     
@@ -24,6 +26,7 @@ private extension ServerNetworkConstants {
     static let resetPasswordString: String = hostname + auth + "resetPassword"
 }
 
+// MARK: - Server login service
 class ServerLoginService: LoginServiceProtocol {
     var keyChainService: KeyChainServiceProtocol?
     

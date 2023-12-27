@@ -7,6 +7,7 @@
 
 import Firebase
 
+// MARK: - Data service class
 class FirebaseNetworkDataService: NetworkDataServiceProtocol {
     private enum Constants {
         static let childPathToData: String = "bus_schedule"

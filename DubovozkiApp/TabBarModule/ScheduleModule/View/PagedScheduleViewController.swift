@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Paged schedule view
 class PagedScheduleViewController: UIViewController {
     private enum Constants {
         static let buttonsOffset: CGFloat = 5

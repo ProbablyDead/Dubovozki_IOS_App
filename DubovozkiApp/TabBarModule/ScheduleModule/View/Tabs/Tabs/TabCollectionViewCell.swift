@@ -7,11 +7,13 @@
 
 import UIKit
 
+// MARK: - Tab item protocol
 protocol TabItemProtocol: UIView {
     func onSelected()
     func onNotSelected()
 }
 
+// MARK: - Tab collection view cell
 class TabCollectionViewCell: UICollectionViewCell {
     static let reuseID: String = "TabCell"
     

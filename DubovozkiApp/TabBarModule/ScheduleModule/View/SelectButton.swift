@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Select button
 class SelectButton: UIButton {
     private enum Constants {
         static let buttonsCornerRadius: CGFloat = 5

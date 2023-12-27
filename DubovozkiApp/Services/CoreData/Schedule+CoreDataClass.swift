@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-// MARK: Generated accessors for bus_list
+// MARK: - Generated accessors for bus_list
 extension Schedule {
 
     @objc(addBus_listObject:)

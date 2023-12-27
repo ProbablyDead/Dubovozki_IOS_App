@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+// MARK: - Bus model extension
 extension Bus {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Bus> {

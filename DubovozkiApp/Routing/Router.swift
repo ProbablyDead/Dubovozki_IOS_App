@@ -7,11 +7,13 @@
 
 import UIKit
 
+// MARK: - Router main protocol
 protocol RouterMainProtocol {
     var navigationController: UINavigationController? { get set }
     var assemblyBuilder: AssemblyBuilderProtocol? { get set }
 }
 
+// MARK: - Router protocol
 protocol RouterProtocol: RouterMainProtocol {
     func loginViewController()
     func tabBarViewController()
@@ -19,6 +21,7 @@ protocol RouterProtocol: RouterMainProtocol {
     func popToRoot()
 }
 
+// MARK: - Router class
 class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var assemblyBuilder: AssemblyBuilderProtocol?

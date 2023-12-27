@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Tab view
 class TabView: UIView, TabItemProtocol {
     private var title: String
     

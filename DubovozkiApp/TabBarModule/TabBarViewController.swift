@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Tab bar view
 class TabBarViewController: UITabBarController {
     var mapViewController: UIViewController!
     var scheduleViewController: UIViewController!

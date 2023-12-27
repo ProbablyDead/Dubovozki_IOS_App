@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Model for stations module
 fileprivate enum RouteTypes: String {
     case odintsovoRoute = "Odintsovo"
     case molodezhnayaRoute = "Molodezhnaya"

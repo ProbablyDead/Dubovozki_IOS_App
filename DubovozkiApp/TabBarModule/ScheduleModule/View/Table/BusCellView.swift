@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Bus cell view
 class BusCell: UITableViewCell {
     static let reuseID: String = "BusCell"
     

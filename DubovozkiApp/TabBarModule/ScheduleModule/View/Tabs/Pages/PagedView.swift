@@ -7,10 +7,12 @@
 
 import UIKit
 
+// MARK: - Paged view protocol
 protocol PagedViewDelegate: AnyObject {
     func didMoveToPage(index: Int)
 }
 
+// MARK: - Paged view
 class PagedView: UIView {
     public weak var delegate: PagedViewDelegate?
     public var currentViewIndex: Int = 0

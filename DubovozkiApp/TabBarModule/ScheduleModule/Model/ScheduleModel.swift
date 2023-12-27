@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: - Model protocol
 protocol ModelProtocol {
     func getRawData(dataChanged: @escaping ([Bus]) -> Void) -> [Bus]?
 }
 
+// MARK: - Model class
 class ScheduleModel: ModelProtocol {
     init(networkDataService: NetworkDataServiceProtocol) {
         Schedule.networkDataService = networkDataService

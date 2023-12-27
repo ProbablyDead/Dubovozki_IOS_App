@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+// MARK: - Bus model
 public class Bus: NSManagedObject, Codable {
     enum CodingKeys: CodingKey {
         case id, day, dayTime, dayTimeString, direction, station

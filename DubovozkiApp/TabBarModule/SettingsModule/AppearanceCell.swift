@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Appearance button cell view
 final class AppearanceCell: UITableViewCell {
     static let reuseID: String = "AppearanceCell"
     

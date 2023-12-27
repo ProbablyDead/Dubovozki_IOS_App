@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Paged view cell
 class PageCollectionViewCell: UICollectionViewCell {
     public static let reuseID: String = "PagedCell"
     

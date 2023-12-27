@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - View pager
 class ViewPager: UIView {
     public lazy var tabbedView: TabbedView = TabbedView(tabHeight: tabHeight)
     public let pagedView: PagedView = PagedView()

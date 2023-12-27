@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Schedule table view
 class ScheduleTableView: UITableView {
     private enum Constants {
         static let cellHeight: CGFloat = UIScreen.main.bounds.height / 12

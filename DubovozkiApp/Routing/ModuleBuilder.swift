@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Assembly builder protocol
 protocol AssemblyBuilderProtocol {
     func createLoginModule(router: RouterProtocol) -> UIViewController
     func createTabBarModule(router: RouterProtocol) -> UIViewController
@@ -16,6 +17,7 @@ protocol AssemblyBuilderProtocol {
     func createSettingsModule(loginService: LoginServiceProtocol, router: RouterProtocol) -> UIViewController
 }
 
+// MARK: - Assembly module builder
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     private var loginService: LoginServiceProtocol
     private var networkDataService: NetworkDataServiceProtocol

@@ -8,6 +8,7 @@
 import UIKit
 import GoogleSignIn
 
+// MARK: - Login service protocol
 protocol LoginServiceProtocol {
     func checkAuth() -> Bool
     func loginUser(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
@@ -17,20 +18,24 @@ protocol LoginServiceProtocol {
     func signOut()
 }
 
+// MARK: - Nework data service initializer protocol
 protocol NetworkDataInitializerProtocol {
     func configure()
 }
 
+// MARK: - Nework data service protocol
 protocol NetworkDataServiceProtocol {
     func getData(completion: @escaping ((Data) -> Void))
 }
 
+// MARK: - Login service view protocol
 protocol LoginViewControllerProtocol {
     func loginUser(email: String, password: String)
     func success()
     func failure(error: Error)
 }
 
+// MARK: - Login service view 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     private enum Constants {
         static let logoImageName: String = "LogoImage"

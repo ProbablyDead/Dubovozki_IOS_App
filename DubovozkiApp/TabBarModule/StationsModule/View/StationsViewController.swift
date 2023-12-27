@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Stations module view 
 class StationsViewController: UIViewController {
     private enum Constants {
         static let sideStackViewOffset: CGFloat = 5

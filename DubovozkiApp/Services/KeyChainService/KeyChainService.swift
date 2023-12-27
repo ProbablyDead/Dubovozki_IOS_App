@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - KeyChain service
 class KeyChainService: KeyChainServiceProtocol {
     private let currentUser: String = "currentUser"
     

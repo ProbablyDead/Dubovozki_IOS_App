@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - Appearence saving
 class AppearanceSaving {
     public static let shared = AppearanceSaving()
     

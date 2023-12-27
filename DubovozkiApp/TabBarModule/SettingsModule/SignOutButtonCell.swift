@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Sign out button cell view
 final class SignOutButtonCell: UITableViewCell {
     static let reuseID: String = "SignOutCell"
     

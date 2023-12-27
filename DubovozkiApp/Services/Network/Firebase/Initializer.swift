@@ -7,6 +7,7 @@
 
 import Firebase
 
+// MARK: - Initializer for firebase
 class FirebaseNetworkDataInitializer: NetworkDataInitializerProtocol {
     func configure() {
         FirebaseApp.configure()
