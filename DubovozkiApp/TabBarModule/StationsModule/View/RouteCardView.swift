@@ -108,10 +108,4 @@ class RouteCardView: UIView {
         button.topAnchor.constraint(equalTo: topAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
-    
-//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-//        let hitView = super.hitTest(point, with: event)
-//        print("Hit Test: \(hitView)")
-//        return hitView
-//    }
 }

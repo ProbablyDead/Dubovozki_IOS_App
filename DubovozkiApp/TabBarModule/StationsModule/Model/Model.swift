@@ -56,7 +56,18 @@ fileprivate enum StationTypes {
     }
     
     var imageName: String {
-        "ImageWillBeSoon"
+        switch self {
+        case .dubkiStation:
+            "dubki"
+        case .dubkiToMldStation:
+            "dubkiMld"
+        case .odintsovoStation:
+            "odintsovo"
+        case .slavyanskyStation:
+            "slavyanskyBlvd"
+        case .molodezhkaStation:
+            "molodezhnaya"
+        }
     }
     
     var link: String {
