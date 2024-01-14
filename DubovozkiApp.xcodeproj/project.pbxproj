@@ -88,6 +88,8 @@
 		C0AE5B372B18B3FA002DC427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AE5B362B18B3FA002DC427 /* Assets.xcassets */; };
 		C0B7C6952B2114DB003ED203 /* FirebaseNetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6942B2114DB003ED203 /* FirebaseNetworkDataService.swift */; };
 		C0B7C6972B211864003ED203 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6962B211864003ED203 /* Initializer.swift */; };
+		C0C721B22B544AC5000AB442 /* ContactMeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */; };
+		C0C721B32B544AC5000AB442 /* ContactMeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */; };
 		C0D4B9C02B22AC380074D364 /* BusCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D4B9BF2B22AC380074D364 /* BusCellView.swift */; };
 		C0E2E8F12B2E65E9009F2A48 /* ServerLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F02B2E65E9009F2A48 /* ServerLoginService.swift */; };
 		C0E2E8F32B2E67A6009F2A48 /* ServerNetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */; };
@@ -143,6 +145,7 @@
 		C0AE5B362B18B3FA002DC427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0B7C6942B2114DB003ED203 /* FirebaseNetworkDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkDataService.swift; sourceTree = "<group>"; };
 		C0B7C6962B211864003ED203 /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
+		C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMeButtonCell.swift; sourceTree = "<group>"; };
 		C0D4B9BF2B22AC380074D364 /* BusCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCellView.swift; sourceTree = "<group>"; };
 		C0E2E8F02B2E65E9009F2A48 /* ServerLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLoginService.swift; sourceTree = "<group>"; };
 		C0E2E8F22B2E67A6009F2A48 /* ServerNetworkDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNetworkDataService.swift; sourceTree = "<group>"; };
@@ -212,8 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */,
-				C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */,
-				C086613F2B35B48A006F8365 /* AppearanceCell.swift */,
+				C0C721B42B544ACD000AB442 /* Cells */,
 			);
 			path = SettingsModule;
 			sourceTree = "<group>";
@@ -420,6 +422,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C0C721B42B544ACD000AB442 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */,
+				C086613F2B35B48A006F8365 /* AppearanceCell.swift */,
+				C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C0E2E8EF2B2E65D1009F2A48 /* Server */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +591,7 @@
 				C04AD0262B2E0A9E0069089B /* Bus+CoreDataClass.swift in Sources */,
 				C04AD0272B2E0A9E0069089B /* TabbedView.swift in Sources */,
 				C04AD0282B2E0A9E0069089B /* TabCollectionViewCell.swift in Sources */,
+				C0C721B32B544AC5000AB442 /* ContactMeButtonCell.swift in Sources */,
 				C04AD0292B2E0A9E0069089B /* Router.swift in Sources */,
 				C04AD02A2B2E0A9E0069089B /* ScheduleViewPresenter.swift in Sources */,
 				C0E2E8F32B2E67A6009F2A48 /* ServerNetworkDataService.swift in Sources */,
@@ -628,6 +641,7 @@
 				C040B48C2B1B57140022EF75 /* ScheduleViewPresenter.swift in Sources */,
 				C0AE5B322B18B3F8002DC427 /* PagedScheduleViewController.swift in Sources */,
 				C0AE5B2E2B18B3F8002DC427 /* AppDelegate.swift in Sources */,
+				C0C721B22B544AC5000AB442 /* ContactMeButtonCell.swift in Sources */,
 				C0A9ACA02B348D4D0041E676 /* Model.swift in Sources */,
 				C08661402B35B48A006F8365 /* AppearanceCell.swift in Sources */,
 				C040B49C2B1B90D90022EF75 /* ModuleBuilder.swift in Sources */,

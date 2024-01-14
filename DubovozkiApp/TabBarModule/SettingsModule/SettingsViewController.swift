@@ -13,7 +13,10 @@ class SettingsViewController: UIViewController {
         static let navItemTitle: String = "Settings".localized()
         static let numberOfItemsInMainSection: Int = 1
         static let numberOfItemsInSignOutSection: Int = 1
-        static let numberOfSections: Int = 2
+        static let numberOfItemsContactMeSection: Int = 1
+        static let numberOfSections: Int = 3
+        static let supportEmail: String = "dubovozki-supp@yandex.ru"
+        static let supportEmailLink: String = "mailto:" + supportEmail
     }
     
     private let appearanceSettings = AppearanceSaving()
@@ -40,8 +43,9 @@ class SettingsViewController: UIViewController {
         settingsTable.delegate = self
         settingsTable.dataSource = self
         
-        settingsTable.register(SignOutButtonCell.self, forCellReuseIdentifier: SignOutButtonCell.reuseID)
         settingsTable.register(AppearanceCell.self, forCellReuseIdentifier: AppearanceCell.reuseID)
+        settingsTable.register(ContactMeButtonCell.self, forCellReuseIdentifier: ContactMeButtonCell.reuseID)
+        settingsTable.register(SignOutButtonCell.self, forCellReuseIdentifier: SignOutButtonCell.reuseID)
         
         settingsTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         settingsTable.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -79,7 +83,20 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? Constants.numberOfItemsInMainSection : Constants.numberOfItemsInSignOutSection
+        switch section {
+        case 0: Constants.numberOfItemsInMainSection
+        case 1: Constants.numberOfItemsContactMeSection
+        case 2: Constants.numberOfItemsInSignOutSection
+        default: 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            if let url = URL(string: Constants.supportEmailLink) {
+                UIApplication.shared.open(url)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,6 +110,14 @@ extension SettingsViewController: UITableViewDataSource {
             return appearanceCell
             
         case 1:
+            let cell = settingsTable.dequeueReusableCell(withIdentifier: ContactMeButtonCell.reuseID, for: indexPath)
+            guard let contactMeCell = cell as? ContactMeButtonCell else { return cell }
+            
+            contactMeCell.configure(email: Constants.supportEmail)
+            
+            return contactMeCell
+            
+        case 2:
             let cell = settingsTable.dequeueReusableCell(withIdentifier: SignOutButtonCell.reuseID, for: indexPath)
             guard let signOutCell = cell as? SignOutButtonCell else { return cell }
             
