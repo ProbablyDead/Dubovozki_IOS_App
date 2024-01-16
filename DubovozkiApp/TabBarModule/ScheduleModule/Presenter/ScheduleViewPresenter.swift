@@ -26,6 +26,7 @@ protocol ScheduleViewPresenterProtocol: AnyObject {
 class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     private enum Constants {
         static let millisecondsInDay: Int64 = 86400000
+        static let millisecondsInMinute: Int64 = 60000
         
         static let updateTablesTimeSeconds: TimeInterval = 3
         static let updateDataTimeSeconds: TimeInterval = 60
@@ -136,12 +137,12 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         let milliseconds = Int64(now.timeIntervalSince(midnight) * 1000)
         
         closestMskBus.item = mskBuses?.firstIndex {
-            let dif = ($0.dayTime + 60000 - milliseconds)
+            let dif = ($0.dayTime + Constants.millisecondsInMinute - milliseconds)
             return dif > 0
         } ?? 0
         
         closestDubkiBus.item = dubkiBuses?.firstIndex {
-            let dif = ($0.dayTime + 60000 - milliseconds)
+            let dif = ($0.dayTime + Constants.millisecondsInMinute - milliseconds)
             return dif > 0
         } ?? 0
     }
@@ -180,15 +181,14 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     }
     
     @objc
-    func getData() {
-        guard let data = model?.getRawData(dataChanged: { [weak self] result in
+    private func checkForUpdate() -> [Bus]? {
+        model?.getRawData(dataChanged: { [weak self] result in
             self?.buses = result
-            return
-        }) else {
-            return
-        }
-        
-        buses = data
+        })
+    }
+    
+    public func getData() {
+        buses = checkForUpdate()
     }
     
     weak var view: ScheduleViewProtocol?
@@ -200,7 +200,7 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         self.refreshTablesTimer = Timer(timeInterval: Constants.updateTablesTimeSeconds, target: self,
                                          selector: #selector(self.refreshTables), userInfo: nil, repeats: true)
         self.refreshDataTimer = Timer(timeInterval: Constants.updateDataTimeSeconds, target: self,
-                                       selector: #selector(self.getData), userInfo: nil, repeats: true)
+                                       selector: #selector(self.checkForUpdate), userInfo: nil, repeats: true)
         RunLoop.main.add(self.refreshTablesTimer!, forMode: .default)
         RunLoop.main.add(self.refreshDataTimer!, forMode: .default)
         
