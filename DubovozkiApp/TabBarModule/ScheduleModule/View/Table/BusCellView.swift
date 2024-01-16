@@ -24,6 +24,8 @@ class BusCell: UITableViewCell {
         
         static let stationTextSize: CGFloat = 20
         static let stationOffsetFromCenter: CGFloat = 30
+        
+        static let millisecondsInMin: Int64 = 60000
     }
     
     private let stationLabel: UILabel = {
@@ -52,7 +54,7 @@ class BusCell: UITableViewCell {
         let midnight = calendar.startOfDay(for: now)
         let milliseconds = Int64(now.timeIntervalSince(midnight) * 1000)
         
-        if busTime < milliseconds {
+        if busTime + Constants.millisecondsInMin < milliseconds {
             return Filters.typeOfBus.passed
         } else {
             if (busTime - milliseconds) <= Filters.closeBusTime {
@@ -73,7 +75,7 @@ class BusCell: UITableViewCell {
         let difference = busTime - milliseconds
         
         let houres = difference/3600000
-        let minutes: Int64 = (difference - 3600000 * houres)/60000
+        let minutes: Int64 = (difference - 3600000 * houres)/60000 + (difference >= 0 ? 1 : 0)
         
         let houresStr = (houres != 0) ? "\(abs(houres)) " + "h".localized() + " " : ""
         let minutesStr = (minutes != 0) ? "\(abs(minutes)) " + "min".localized() : ""
