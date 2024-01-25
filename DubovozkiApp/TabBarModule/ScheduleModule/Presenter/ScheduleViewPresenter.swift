@@ -149,8 +149,10 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     
     private var buses: [Bus]? {
         didSet {
-            buses = processBusSchedule(buses: buses!)
-            stopLoading()
+            if let buses = buses {
+                self.buses = processBusSchedule(buses: buses)
+                stopLoading()
+            }
             mskBuses = buses?.filter { $0.direction == Filters.direction.msk.rawValue }
             mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
             dubkiBuses = buses?.filter { $0.direction == Filters.direction.dbk.rawValue }
