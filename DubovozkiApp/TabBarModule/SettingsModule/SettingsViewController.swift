@@ -14,7 +14,12 @@ class SettingsViewController: UIViewController {
         static let numberOfItemsInMainSection: Int = 1
         static let numberOfItemsInSignOutSection: Int = 1
         static let numberOfItemsContactMeSection: Int = 1
+        #if WithOutLogin
+        static let numberOfSections: Int = 2
+        #else
         static let numberOfSections: Int = 3
+        #endif
+        
         static let supportEmail: String = "dubovozki-supp@yandex.ru"
         static let supportEmailLink: String = "mailto:" + supportEmail
     }
@@ -45,7 +50,9 @@ class SettingsViewController: UIViewController {
         
         settingsTable.register(AppearanceCell.self, forCellReuseIdentifier: AppearanceCell.reuseID)
         settingsTable.register(ContactMeButtonCell.self, forCellReuseIdentifier: ContactMeButtonCell.reuseID)
+        #if !WithOutLogin
         settingsTable.register(SignOutButtonCell.self, forCellReuseIdentifier: SignOutButtonCell.reuseID)
+        #endif
         
         settingsTable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         settingsTable.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -117,7 +124,9 @@ extension SettingsViewController: UITableViewDataSource {
             
             return contactMeCell
             
+            
         case 2:
+            #if !WithOutLogin
             let cell = settingsTable.dequeueReusableCell(withIdentifier: SignOutButtonCell.reuseID, for: indexPath)
             guard let signOutCell = cell as? SignOutButtonCell else { return cell }
             
@@ -126,6 +135,9 @@ extension SettingsViewController: UITableViewDataSource {
                 self?.router?.loginViewController()
             }
             return signOutCell
+            #else
+            return settingsTable.dequeueReusableCell(withIdentifier: ContactMeButtonCell.reuseID, for: indexPath)
+            #endif
             
         default:
             return UITableViewCell()

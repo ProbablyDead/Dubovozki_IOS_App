@@ -19,6 +19,13 @@
 		C040B49C2B1B90D90022EF75 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B49B2B1B90D80022EF75 /* ModuleBuilder.swift */; };
 		C040B4A32B1CBF570022EF75 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4A22B1CBF570022EF75 /* Router.swift */; };
 		C040B4A62B1CC3E50022EF75 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4A52B1CC3E50022EF75 /* LoginViewController.swift */; };
+		C0432F912B685D5900C41D0B /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0432F8E2B685CF600C41D0B /* Stub.swift */; };
+		C0432F922B685D9300C41D0B /* FirebaseNetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6942B2114DB003ED203 /* FirebaseNetworkDataService.swift */; };
+		C0432F942B685DC000C41D0B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C0432F932B685DC000C41D0B /* FirebaseDatabase */; };
+		C0432F952B685E9600C41D0B /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6962B211864003ED203 /* Initializer.swift */; };
+		C0432F962B685EBD00C41D0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C010767E2B2E020F00B34BD5 /* GoogleService-Info.plist */; };
+		C0432F972B685FCA00C41D0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4A52B1CC3E50022EF75 /* LoginViewController.swift */; };
+		C0432F982B685FDC00C41D0B /* LoginErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0221F6D2B28C815008A4394 /* LoginErrors.swift */; };
 		C04AD0232B2E0A9E0069089B /* ScheduleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2952B23C19D0088D5A3 /* ScheduleTableView.swift */; };
 		C04AD0242B2E0A9E0069089B /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2922B2372A90088D5A3 /* Filters.swift */; };
 		C04AD0252B2E0A9E0069089B /* LoginErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0221F6D2B28C815008A4394 /* LoginErrors.swift */; };
@@ -84,6 +91,42 @@
 		C0AE5B302B18B3F8002DC427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B2F2B18B3F8002DC427 /* SceneDelegate.swift */; };
 		C0AE5B322B18B3F8002DC427 /* PagedScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B312B18B3F8002DC427 /* PagedScheduleViewController.swift */; };
 		C0AE5B372B18B3FA002DC427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AE5B362B18B3FA002DC427 /* Assets.xcassets */; };
+		C0B13C862B685B600078A4BD /* ScheduleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2952B23C19D0088D5A3 /* ScheduleTableView.swift */; };
+		C0B13C872B685B600078A4BD /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2922B2372A90088D5A3 /* Filters.swift */; };
+		C0B13C892B685B600078A4BD /* Bus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B42B21D47D00CB2983 /* Bus+CoreDataClass.swift */; };
+		C0B13C8A2B685B600078A4BD /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A22B23F7CF0088D5A3 /* TabbedView.swift */; };
+		C0B13C8B2B685B600078A4BD /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A42B23FA770088D5A3 /* TabCollectionViewCell.swift */; };
+		C0B13C8C2B685B600078A4BD /* ContactMeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */; };
+		C0B13C8D2B685B600078A4BD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B4A22B1CBF570022EF75 /* Router.swift */; };
+		C0B13C8E2B685B600078A4BD /* ScheduleViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B48B2B1B57140022EF75 /* ScheduleViewPresenter.swift */; };
+		C0B13C902B685B600078A4BD /* PagedScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B312B18B3F8002DC427 /* PagedScheduleViewController.swift */; };
+		C0B13C912B685B600078A4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B2D2B18B3F8002DC427 /* AppDelegate.swift */; };
+		C0B13C922B685B600078A4BD /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040B49B2B1B90D80022EF75 /* ModuleBuilder.swift */; };
+		C0B13C932B685B600078A4BD /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086613F2B35B48A006F8365 /* AppearanceCell.swift */; };
+		C0B13C942B685B600078A4BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AE5B2F2B18B3F8002DC427 /* SceneDelegate.swift */; };
+		C0B13C952B685B600078A4BD /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBECF2B1E87FB00843189 /* StationsViewController.swift */; };
+		C0B13C962B685B600078A4BD /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B62B21D47D00CB2983 /* Schedule+CoreDataClass.swift */; };
+		C0B13C972B685B600078A4BD /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A29F2B23F02B0088D5A3 /* PageCollectionViewCell.swift */; };
+		C0B13C982B685B600078A4BD /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A72B2400780088D5A3 /* ViewPager.swift */; };
+		C0B13C992B685B600078A4BD /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B72B21D47D00CB2983 /* Schedule+CoreDataProperties.swift */; };
+		C0B13C9A2B685B600078A4BD /* BusCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D4B9BF2B22AC380074D364 /* BusCellView.swift */; };
+		C0B13C9B2B685B600078A4BD /* ScheduleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07F46842B215204002E0B93 /* ScheduleModel.xcdatamodeld */; };
+		C0B13C9C2B685B600078A4BD /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A92B2409440088D5A3 /* TabView.swift */; };
+		C0B13C9E2B685B600078A4BD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBECD2B1E87EC00843189 /* SettingsViewController.swift */; };
+		C0B13C9F2B685B600078A4BD /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661522B35CC10006F8365 /* Extension+String.swift */; };
+		C0B13CA12B685B600078A4BD /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EB25A62B24A69B0028EBF2 /* SelectButton.swift */; };
+		C0B13CA22B685B600078A4BD /* RouteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A45B1B2B28974400F8BCF5 /* RouteCardView.swift */; };
+		C0B13CA32B685B600078A4BD /* Bus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18B52B21D47D00CB2983 /* Bus+CoreDataProperties.swift */; };
+		C0B13CA42B685B600078A4BD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A9AC9F2B348D4D0041E676 /* Model.swift */; };
+		C0B13CA62B685B600078A4BD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01FBEC92B1E81AF00843189 /* TabBarViewController.swift */; };
+		C0B13CA82B685B600078A4BD /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661392B3591EC006F8365 /* AdditionalViewController.swift */; };
+		C0B13CA92B685B600078A4BD /* AppearanceSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08661432B35BC66006F8365 /* AppearanceSaving.swift */; };
+		C0B13CAA2B685B600078A4BD /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B18E02B22670E00CB2983 /* ScheduleModel.swift */; };
+		C0B13CAC2B685B600078A4BD /* PagedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A29D2B23ED560088D5A3 /* PagedView.swift */; };
+		C0B13CAE2B685B600078A4BD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C0B13C822B685B600078A4BD /* GoogleSignIn */; };
+		C0B13CAF2B685B600078A4BD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0B13C842B685B600078A4BD /* GoogleSignInSwift */; };
+		C0B13CB12B685B600078A4BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C08661502B35CBDF006F8365 /* Localizable.strings */; };
+		C0B13CB22B685B600078A4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AE5B362B18B3FA002DC427 /* Assets.xcassets */; };
 		C0B7C6952B2114DB003ED203 /* FirebaseNetworkDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6942B2114DB003ED203 /* FirebaseNetworkDataService.swift */; };
 		C0B7C6972B211864003ED203 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7C6962B211864003ED203 /* Initializer.swift */; };
 		C0C721B22B544AC5000AB442 /* ContactMeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */; };
@@ -105,11 +148,12 @@
 		C0221F6D2B28C815008A4394 /* LoginErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrors.swift; sourceTree = "<group>"; };
 		C040B4422B18D29C0022EF75 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C040B4462B18D54A0022EF75 /* FirebaseLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginService.swift; sourceTree = "<group>"; };
-		C040B44B2B1A11B10022EF75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C040B44B2B1A11B10022EF75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DubovozkiApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		C040B48B2B1B57140022EF75 /* ScheduleViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewPresenter.swift; sourceTree = "<group>"; };
 		C040B49B2B1B90D80022EF75 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		C040B4A22B1CBF570022EF75 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C040B4A52B1CC3E50022EF75 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0432F8E2B685CF600C41D0B /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		C04AD04F2B2E0A9E0069089B /* DubovozkiAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubovozkiAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C056A2922B2372A90088D5A3 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		C056A2952B23C19D0088D5A3 /* ScheduleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableView.swift; sourceTree = "<group>"; };
@@ -139,6 +183,7 @@
 		C0AE5B2F2B18B3F8002DC427 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0AE5B312B18B3F8002DC427 /* PagedScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedScheduleViewController.swift; sourceTree = "<group>"; };
 		C0AE5B362B18B3FA002DC427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0B13CB62B685B600078A4BD /* DubovozkiAppWithOutLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubovozkiAppWithOutLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B7C6942B2114DB003ED203 /* FirebaseNetworkDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkDataService.swift; sourceTree = "<group>"; };
 		C0B7C6962B211864003ED203 /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
 		C0C721B12B544AC5000AB442 /* ContactMeButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMeButtonCell.swift; sourceTree = "<group>"; };
@@ -169,6 +214,16 @@
 				C040B4892B1A31110022EF75 /* FirebaseAuth in Frameworks */,
 				C0740A742B1D2079000B15C8 /* GoogleSignIn in Frameworks */,
 				C0740A762B1D259D000B15C8 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B13CAD2B685B600078A4BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0432F942B685DC000C41D0B /* FirebaseDatabase in Frameworks */,
+				C0B13CAE2B685B600078A4BD /* GoogleSignIn in Frameworks */,
+				C0B13CAF2B685B600078A4BD /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +314,14 @@
 			path = LoginModule;
 			sourceTree = "<group>";
 		};
+		C0432F902B685CFA00C41D0B /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				C0432F8E2B685CF600C41D0B /* Stub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		C056A2942B23C1790088D5A3 /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +405,7 @@
 			children = (
 				C0AE5B2A2B18B3F8002DC427 /* DubovozkiAppFirebase.app */,
 				C04AD04F2B2E0A9E0069089B /* DubovozkiAppServer.app */,
+				C0B13CB62B685B600078A4BD /* DubovozkiAppWithOutLogin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +457,7 @@
 			children = (
 				C0E2E8EF2B2E65D1009F2A48 /* Server */,
 				C010767D2B2DF8D800B34BD5 /* Firebase */,
+				C0432F902B685CFA00C41D0B /* Stub */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -511,6 +576,28 @@
 			productReference = C0AE5B2A2B18B3F8002DC427 /* DubovozkiAppFirebase.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C0B13C812B685B600078A4BD /* DubovozkiAppWithOutLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B13CB32B685B600078A4BD /* Build configuration list for PBXNativeTarget "DubovozkiAppWithOutLogin" */;
+			buildPhases = (
+				C0B13C852B685B600078A4BD /* Sources */,
+				C0B13CAD2B685B600078A4BD /* Frameworks */,
+				C0B13CB02B685B600078A4BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DubovozkiAppWithOutLogin;
+			packageProductDependencies = (
+				C0B13C822B685B600078A4BD /* GoogleSignIn */,
+				C0B13C842B685B600078A4BD /* GoogleSignInSwift */,
+				C0432F932B685DC000C41D0B /* FirebaseDatabase */,
+			);
+			productName = DubovozkiApp;
+			productReference = C0B13CB62B685B600078A4BD /* DubovozkiAppWithOutLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -546,6 +633,7 @@
 			targets = (
 				C0AE5B292B18B3F8002DC427 /* DubovozkiAppFirebase */,
 				C04AD01B2B2E0A9E0069089B /* DubovozkiAppServer */,
+				C0B13C812B685B600078A4BD /* DubovozkiAppWithOutLogin */,
 			);
 		};
 /* End PBXProject section */
@@ -567,6 +655,16 @@
 				C086614D2B35CBDF006F8365 /* Localizable.strings in Resources */,
 				C010767F2B2E020F00B34BD5 /* GoogleService-Info.plist in Resources */,
 				C0AE5B372B18B3FA002DC427 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B13CB02B685B600078A4BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B13CB12B685B600078A4BD /* Localizable.strings in Resources */,
+				C0B13CB22B685B600078A4BD /* Assets.xcassets in Resources */,
+				C0432F962B685EBD00C41D0B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +759,50 @@
 				C09B18E12B22670E00CB2983 /* ScheduleModel.swift in Sources */,
 				C056A29E2B23ED560088D5A3 /* PagedView.swift in Sources */,
 				C0B7C6972B211864003ED203 /* Initializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B13C852B685B600078A4BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0432F972B685FCA00C41D0B /* LoginViewController.swift in Sources */,
+				C0B13C862B685B600078A4BD /* ScheduleTableView.swift in Sources */,
+				C0432F982B685FDC00C41D0B /* LoginErrors.swift in Sources */,
+				C0B13C872B685B600078A4BD /* Filters.swift in Sources */,
+				C0B13C892B685B600078A4BD /* Bus+CoreDataClass.swift in Sources */,
+				C0B13C8A2B685B600078A4BD /* TabbedView.swift in Sources */,
+				C0B13C8B2B685B600078A4BD /* TabCollectionViewCell.swift in Sources */,
+				C0B13C8C2B685B600078A4BD /* ContactMeButtonCell.swift in Sources */,
+				C0B13C8D2B685B600078A4BD /* Router.swift in Sources */,
+				C0B13C8E2B685B600078A4BD /* ScheduleViewPresenter.swift in Sources */,
+				C0B13C902B685B600078A4BD /* PagedScheduleViewController.swift in Sources */,
+				C0B13C912B685B600078A4BD /* AppDelegate.swift in Sources */,
+				C0B13C922B685B600078A4BD /* ModuleBuilder.swift in Sources */,
+				C0B13C932B685B600078A4BD /* AppearanceCell.swift in Sources */,
+				C0432F912B685D5900C41D0B /* Stub.swift in Sources */,
+				C0B13C942B685B600078A4BD /* SceneDelegate.swift in Sources */,
+				C0B13C952B685B600078A4BD /* StationsViewController.swift in Sources */,
+				C0B13C962B685B600078A4BD /* Schedule+CoreDataClass.swift in Sources */,
+				C0B13C972B685B600078A4BD /* PageCollectionViewCell.swift in Sources */,
+				C0B13C982B685B600078A4BD /* ViewPager.swift in Sources */,
+				C0B13C992B685B600078A4BD /* Schedule+CoreDataProperties.swift in Sources */,
+				C0B13C9A2B685B600078A4BD /* BusCellView.swift in Sources */,
+				C0B13C9B2B685B600078A4BD /* ScheduleModel.xcdatamodeld in Sources */,
+				C0432F922B685D9300C41D0B /* FirebaseNetworkDataService.swift in Sources */,
+				C0B13C9C2B685B600078A4BD /* TabView.swift in Sources */,
+				C0B13C9E2B685B600078A4BD /* SettingsViewController.swift in Sources */,
+				C0B13C9F2B685B600078A4BD /* Extension+String.swift in Sources */,
+				C0B13CA12B685B600078A4BD /* SelectButton.swift in Sources */,
+				C0B13CA22B685B600078A4BD /* RouteCardView.swift in Sources */,
+				C0B13CA32B685B600078A4BD /* Bus+CoreDataProperties.swift in Sources */,
+				C0B13CA42B685B600078A4BD /* Model.swift in Sources */,
+				C0B13CA62B685B600078A4BD /* TabBarViewController.swift in Sources */,
+				C0B13CA82B685B600078A4BD /* AdditionalViewController.swift in Sources */,
+				C0432F952B685E9600C41D0B /* Initializer.swift in Sources */,
+				C0B13CA92B685B600078A4BD /* AppearanceSaving.swift in Sources */,
+				C0B13CAA2B685B600078A4BD /* ScheduleModel.swift in Sources */,
+				C0B13CAC2B685B600078A4BD /* PagedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +1078,74 @@
 			};
 			name = Release;
 		};
+		C0B13CB42B685B600078A4BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUD5CPHJR9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DubovozkiApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Дубовозки";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
+				OTHER_SWIFT_FLAGS = "-DWithOutLogin";
+				PRODUCT_BUNDLE_IDENTIFIER = su.brf.apps.dubovozki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0B13CB52B685B600078A4BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUD5CPHJR9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DubovozkiApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Дубовозки";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
+				OTHER_SWIFT_FLAGS = "-DWithOutLogin";
+				PRODUCT_BUNDLE_IDENTIFIER = su.brf.apps.dubovozki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -962,6 +1172,15 @@
 			buildConfigurations = (
 				C0AE5B3F2B18B3FA002DC427 /* Debug */,
 				C0AE5B402B18B3FA002DC427 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B13CB32B685B600078A4BD /* Build configuration list for PBXNativeTarget "DubovozkiAppWithOutLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B13CB42B685B600078A4BD /* Debug */,
+				C0B13CB52B685B600078A4BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -993,6 +1212,14 @@
 				minimumVersion = 10.18.0;
 			};
 		};
+		C0B13C832B685B600078A4BD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1005,6 +1232,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C0AE5B462B18C4A3002DC427 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		C0432F932B685DC000C41D0B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0AE5B462B18C4A3002DC427 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 		C04AD01F2B2E0A9E0069089B /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1024,6 +1256,16 @@
 		C0740A752B1D259D000B15C8 /* GoogleSignInSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0740A722B1D2079000B15C8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		C0B13C822B685B600078A4BD /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0B13C832B685B600078A4BD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		C0B13C842B685B600078A4BD /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0B13C832B685B600078A4BD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

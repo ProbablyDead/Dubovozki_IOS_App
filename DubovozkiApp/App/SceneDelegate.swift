@@ -28,6 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginService = ServerLoginService()
         loginService.keyChainService = KeyChainService()
         let networkDataService = ServerNetworkDataService()
+        #elseif WithOutLogin
+        let loginService = Stub()
+        let networkDataService = FirebaseNetworkDataService()
         #endif
         
         let navigationController = UINavigationController()

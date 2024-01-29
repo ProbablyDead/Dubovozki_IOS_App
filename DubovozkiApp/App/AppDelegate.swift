@@ -12,7 +12,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        #if Firebase
+        #if Firebase || WithOutLogin
         FirebaseNetworkDataInitializer().configure()
         #endif
         return true
