@@ -1,6 +1,6 @@
 ## Dubovozki IOS app: 
 #### The application provides a free bus schedule and list of stations for the Dubki dormitory in the form of list. 
-❗Currently uploading to the App Store
+❗App Store: https://apps.apple.com/tr/app/dubovozki/id6475046573
 ##### User able to see upcoming buses for the current day and see the schedule for each day of the week and direction.
 This application implements:
 * UIKit 
