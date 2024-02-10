@@ -35,6 +35,7 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     private var refreshTablesTimer: Timer?
     private var refreshDataTimer: Timer?
     private var currentSelectionOfDate: Filters.date = Filters.date.today
+    private var currentSelectionOfStation: Filters.station = Filters.station.all
     private var closestMskBus: IndexPath = IndexPath(item: 0, section: 0)
     private var closestDubkiBus: IndexPath = IndexPath(item: 0, section: 0)
     
@@ -45,6 +46,10 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         if station != Filters.station.all.rawValue {
             mskBuses = mskBuses?.filter { $0.station == station }
             dubkiBuses = dubkiBuses?.filter { $0.station == station }
+        }
+        
+        if let stationEnum = Filters.station(rawValue: station) {
+            currentSelectionOfStation = stationEnum
         }
         
         guard let date = Int(date) else { return }
@@ -196,11 +201,42 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
     weak var view: ScheduleViewProtocol?
     var model: ModelProtocol?
     
+    private func refreshDate() {
+        setClosest()
+        
+        view?.mskTableView.reloadData()
+        view?.dubkiTableView.reloadData()
+    }
+    
+    @objc
+    private func timedRefresh() {
+        mskBuses = buses?.filter { $0.direction == Filters.direction.msk.rawValue }
+        dubkiBuses = buses?.filter { $0.direction == Filters.direction.dbk.rawValue }
+        
+        if currentSelectionOfStation != Filters.station.all {
+            mskBuses = mskBuses?.filter { $0.station == currentSelectionOfStation.rawValue }
+            dubkiBuses = dubkiBuses?.filter { $0.station == currentSelectionOfStation.rawValue }
+        }
+        
+        if currentSelectionOfDate == Filters.date.today {
+            mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
+            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.todayVar }
+        } else if currentSelectionOfDate == Filters.date.tomorrow {
+            mskBuses = mskBuses?.filter { $0.day == Filters.date.tomorrowVar }
+            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.tomorrowVar }
+        } else {
+            mskBuses = mskBuses?.filter { $0.day == currentSelectionOfDate.rawValue }
+            dubkiBuses = dubkiBuses?.filter { $0.day == currentSelectionOfDate.rawValue }
+        }
+        
+        refreshTables()
+    }
+    
     required init(view: ScheduleViewProtocol, model: ModelProtocol) {
         super.init()
         
         self.refreshTablesTimer = Timer(timeInterval: Constants.updateTablesTimeSeconds, target: self,
-                                         selector: #selector(self.refreshTables), userInfo: nil, repeats: true)
+                                         selector: #selector(self.timedRefresh), userInfo: nil, repeats: true)
         self.refreshDataTimer = Timer(timeInterval: Constants.updateDataTimeSeconds, target: self,
                                        selector: #selector(self.checkForUpdate), userInfo: nil, repeats: true)
         RunLoop.main.add(self.refreshTablesTimer!, forMode: .default)
