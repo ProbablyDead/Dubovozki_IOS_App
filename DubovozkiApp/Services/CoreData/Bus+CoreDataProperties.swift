@@ -18,7 +18,7 @@ extension Bus {
         return request
     }
 
-    @NSManaged public var day: Int16
+    @NSManaged public var dayOfWeek: Int16
     @NSManaged public var dayTime: Int64
     @NSManaged public var dayTimeString: String?
     @NSManaged public var direction: String?

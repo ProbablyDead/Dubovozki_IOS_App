@@ -55,14 +55,14 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         guard let date = Int(date) else { return }
         
         if date == Filters.date.today.rawValue {
-            mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
-            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.todayVar }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
         } else if date == Filters.date.tomorrow.rawValue {
-            mskBuses = mskBuses?.filter { $0.day == Filters.date.tomorrowVar }
-            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.tomorrowVar }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == Filters.date.tomorrowVar }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == Filters.date.tomorrowVar }
         } else {
-            mskBuses = mskBuses?.filter { $0.day == date }
-            dubkiBuses = dubkiBuses?.filter { $0.day == date }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == date }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == date }
         }
         
         if let dataEnum = Filters.date(rawValue: date) {
@@ -108,22 +108,22 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         var processedBuses: [Bus] = buses
         
         processedBuses = processedBuses.map { bus in
-            if bus.day == Filters.date.sunday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
-                bus.day = Int16(Filters.date.monday.rawValue)
+            if bus.dayOfWeek == Filters.date.sunday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
+                bus.dayOfWeek = Int16(Filters.date.monday.rawValue)
                 bus.dayTime -= Constants.millisecondsInDay
             }
             
-            if bus.day == Filters.date.saturday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
-                bus.day = Int16(Filters.date.sunday.rawValue)
+            if bus.dayOfWeek == Filters.date.saturday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
+                bus.dayOfWeek = Int16(Filters.date.sunday.rawValue)
                 bus.dayTime -= Constants.millisecondsInDay
             }
             
-            if bus.day == Filters.date.monday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
-                bus.day = Int16(Filters.date.saturday.rawValue)
+            if bus.dayOfWeek == Filters.date.monday.rawValue && bus.dayTime >= Constants.millisecondsInDay {
+                bus.dayOfWeek = Int16(Filters.date.saturday.rawValue)
                 bus.dayTime -= Constants.millisecondsInDay
             }
             
-            if bus.day == Filters.date.weekdays.rawValue && bus.dayTime >= Constants.millisecondsInDay {
+            if bus.dayOfWeek == Filters.date.weekdays.rawValue && bus.dayTime >= Constants.millisecondsInDay {
                 bus.dayTime -= Constants.millisecondsInDay
             }
             
@@ -159,9 +159,9 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
                 stopLoading()
             }
             mskBuses = buses?.filter { $0.direction == Filters.direction.msk.rawValue }
-            mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
             dubkiBuses = buses?.filter { $0.direction == Filters.direction.dbk.rawValue }
-            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.todayVar }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
         }
     }
     
@@ -219,14 +219,14 @@ class ScheduleViewPresenter: NSObject, ScheduleViewPresenterProtocol {
         }
         
         if currentSelectionOfDate == Filters.date.today {
-            mskBuses = mskBuses?.filter { $0.day == Filters.date.todayVar }
-            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.todayVar }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == Filters.date.todayVar }
         } else if currentSelectionOfDate == Filters.date.tomorrow {
-            mskBuses = mskBuses?.filter { $0.day == Filters.date.tomorrowVar }
-            dubkiBuses = dubkiBuses?.filter { $0.day == Filters.date.tomorrowVar }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == Filters.date.tomorrowVar }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == Filters.date.tomorrowVar }
         } else {
-            mskBuses = mskBuses?.filter { $0.day == currentSelectionOfDate.rawValue }
-            dubkiBuses = dubkiBuses?.filter { $0.day == currentSelectionOfDate.rawValue }
+            mskBuses = mskBuses?.filter { $0.dayOfWeek == currentSelectionOfDate.rawValue }
+            dubkiBuses = dubkiBuses?.filter { $0.dayOfWeek == currentSelectionOfDate.rawValue }
         }
         
         refreshTables()
