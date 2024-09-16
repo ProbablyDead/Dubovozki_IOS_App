@@ -47,8 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Check for updates
         Siren.shared.presentationManager = PresentationManager(appName: "Dubovozki".localized())
         Siren.shared.rulesManager = RulesManager(
-            globalRules: Rules(promptFrequency: Rules.UpdatePromptFrequency.immediately, forAlertType: Rules.AlertType.force),
-            showAlertAfterCurrentVersionHasBeenReleasedForDays: 0)
+            globalRules: Rules(promptFrequency: Rules.UpdatePromptFrequency.immediately, forAlertType: Rules.AlertType.option))
         Siren.shared.wail()
         
         window?.rootViewController = navigationController
