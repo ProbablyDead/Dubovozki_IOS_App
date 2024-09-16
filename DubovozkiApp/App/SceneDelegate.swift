@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Siren
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -42,6 +43,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if !loginService.checkAuth() {
             router.loginViewController()
         }
+        
+        // Check for updates
+        Siren.shared.presentationManager = PresentationManager(appName: "Dubovozki".localized())
+        Siren.shared.rulesManager = RulesManager(
+            globalRules: Rules(promptFrequency: Rules.UpdatePromptFrequency.immediately, forAlertType: Rules.AlertType.force),
+            showAlertAfterCurrentVersionHasBeenReleasedForDays: 0)
+        Siren.shared.wail()
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

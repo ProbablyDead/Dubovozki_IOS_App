@@ -66,6 +66,7 @@
 		C056A2A52B23FA770088D5A3 /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A42B23FA770088D5A3 /* TabCollectionViewCell.swift */; };
 		C056A2A82B2400780088D5A3 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A72B2400780088D5A3 /* ViewPager.swift */; };
 		C056A2AA2B2409440088D5A3 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2A92B2409440088D5A3 /* TabView.swift */; };
+		C0659F6B2C98484200C9152E /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = C0659F6A2C98484200C9152E /* Siren */; };
 		C0740A742B1D2079000B15C8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C0740A732B1D2079000B15C8 /* GoogleSignIn */; };
 		C0740A762B1D259D000B15C8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0740A752B1D259D000B15C8 /* GoogleSignInSwift */; };
 		C07AF1402B2684B50006B25F /* SignOutButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07AF13F2B2684B50006B25F /* SignOutButtonCell.swift */; };
@@ -223,6 +224,7 @@
 			files = (
 				C0432F942B685DC000C41D0B /* FirebaseDatabase in Frameworks */,
 				C0B13CAE2B685B600078A4BD /* GoogleSignIn in Frameworks */,
+				C0659F6B2C98484200C9152E /* Siren in Frameworks */,
 				C0B13CAF2B685B600078A4BD /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +595,7 @@
 				C0B13C822B685B600078A4BD /* GoogleSignIn */,
 				C0B13C842B685B600078A4BD /* GoogleSignInSwift */,
 				C0432F932B685DC000C41D0B /* FirebaseDatabase */,
+				C0659F6A2C98484200C9152E /* Siren */,
 			);
 			productName = DubovozkiApp;
 			productReference = C0B13CB62B685B600078A4BD /* DubovozkiAppWithOutLogin.app */;
@@ -626,6 +629,7 @@
 			packageReferences = (
 				C0AE5B462B18C4A3002DC427 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C0740A722B1D2079000B15C8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C07E6F482C98472400FBBA23 /* XCRemoteSwiftPackageReference "Siren" */,
 			);
 			productRefGroup = C0AE5B2B2B18B3F8002DC427 /* Products */;
 			projectDirPath = "";
@@ -1208,6 +1212,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		C07E6F482C98472400FBBA23 /* XCRemoteSwiftPackageReference "Siren" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/Siren#installation-and-integration";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.3;
+			};
+		};
 		C0AE5B462B18C4A3002DC427 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1251,6 +1263,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C04AD0202B2E0A9E0069089B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		C0659F6A2C98484200C9152E /* Siren */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C07E6F482C98472400FBBA23 /* XCRemoteSwiftPackageReference "Siren" */;
+			productName = Siren;
 		};
 		C0740A732B1D2079000B15C8 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

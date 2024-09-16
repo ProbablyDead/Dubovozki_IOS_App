@@ -1,4 +1,5 @@
 {
+  "originHash" : "2f890d2c29d1a6b34030972a438922ed482b412f730fcfdb5f354a7353eded48",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -136,6 +137,15 @@
       }
     },
     {
+      "identity" : "siren#installation-and-integration",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ArtSabintsev/Siren#installation-and-integration",
+      "state" : {
+        "revision" : "6139af3394bc3635c6c8d5255339796feaa7d1a0",
+        "version" : "6.1.3"
+      }
+    },
+    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
@@ -145,5 +155,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
